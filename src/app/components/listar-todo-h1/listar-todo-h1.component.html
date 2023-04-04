@@ -1,0 +1,958 @@
+<div *ngIf="userLogged|async as user" class="container mt-4">  
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <span class="h3">Listado de respuestas completo</span>
+            <button (click)="exportexcel()" class="btn btn-success btn-lg float-right">Descargar</button>
+            <table hidden class="table table-striped mt-4" id="excel-table-com">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">id</th>
+                      <th scope="col">Codigo</th>
+                      <th scope="col">Materia prima</th>
+                      <th scope="col">Grupo empresarial</th>
+                      <th scope="col">millName</th>
+                      <th scope="col">Nombre legal</th>
+                      <th scope="col">Sitio Web</th>
+                      <th scope="col">Capacidad de producción (t/hora)</th>
+                      <th scope="col">Nombres</th>
+                      <th scope="col">Apellidos</th>
+                      <th scope="col">País de residencia</th>
+                      <th scope="col">Teléfono</th>
+                      <th scope="col">Correo electrónico</th>
+                      <th scope="col">Cargo</th>
+                      <th scope="col">País</th>
+                      <th scope="col">Departamento / estado /provincia</th>
+                      <th scope="col">Municipio</th>
+                      <th scope="col">Coordenadas</th>
+                      <th scope="col">Existe un compromiso o política para el cumplimiento de leyes</th>
+                      <th scope="col">Existe un compromiso o política de anticorrupción</th>
+                      <th scope="col">Existe un compromiso o política de conflictos de interés</th>
+                      <th scope="col">Existe un compromiso o política de antisoborno</th>
+                      <th scope="col">Existe un compromiso o política de Anti-lavado de dinero</th>
+                      <th scope="col">Existe un compromiso o política de trazabilidad</th>
+                      <th scope="col">Existe un compromiso o política de apoyo al proveedor</th>
+                      <th scope="col">El compromiso de cumplimiento de leyes incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de anticorrupción incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de conflicto de interés incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de antisoborno incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de anti-lavado de dinero incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de trazabilidad incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de apoyo al proveedor incluye a los proveedores externos</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas para el cumplimiento de leyes</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas de anticorrupción</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas de conflictos de interés</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas de antisoborno</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas de anti-lavado de dinero</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas de trazabilidad</th>
+                      <th scope="col">Existe un plan de acción documentado que incluya acciones específicas de apoyo al proveedor</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre cumplimiento de leyes a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre anticorrupción a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre conflicto de interés a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre antisoborno a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre anti-lavado de dinero a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre trazabilidad a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre apoyo al proveedor a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en cumplimiento de leyes</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en anticorrupción</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en conflicto de interés</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en antisoborno</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en anti-lavado de dinero</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en trazabilidad</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en apoyo al proveedor</th>
+                      <th scope="col">El compromiso de cumplimiento de leyes y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de anticorrupción y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de conflicto de interés y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de antisoborno y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de anti-lavado de dinero y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de trazabilidad y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de apoyo al proveedor y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de cumplimiento de leyes</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de anticorrupción</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de conflicto de interés</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de antisoborno</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de anti-lavado de dinero</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de trazabilidad</th>
+                      <th scope="col">Se realiza seguimiento a la implementación del plan de acción de apoyo al proveedor</th>
+                      <th scope="col">Los resultados del plan de acción de cumplimiento de leyes son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de anticorrupción son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de conflicto de interés son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de antisoborno son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de anti-lavado de dinero son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de trazabilidad son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de apoyo al proveedor son divulgados y consultados</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre cumplimiento de leyes basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre anticorrupción basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre conflicto de interés basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre antisoborno basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre anti-lavado de dinero basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre trazabilidad basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas sobre apoyo al proveedor basadas en los resultados de la implementación del plan de acción</th>
+                      <th scope="col">El plan de acción de cumplimiento de leyes es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de anticorrupción es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de conflicto de interés es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de antisoborno es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de anti-lavado de dinero es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de trazabilidad es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de apoyo al proveedor es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">¿Es su empresa miembro de la RSPO?</th>
+                      <th scope="col">La certificación RSPO se encuentra en estado Auditado</th>
+                      <th scope="col">La certificación RSPO se encuentra en estado Certificado</th>
+                      <th scope="col">Alcance de la certificación RSPO</th>
+                      <th scope="col">La certificación RA se encuentra en estado Auditado</th>
+                      <th scope="col">La certificación RA se encuentra en estado Certificado</th>
+                      <th scope="col">Alcance de la certificación RA</th>
+                      <th scope="col">La certificación ISCC se encuentra en estado Auditado</th>
+                      <th scope="col">La certificación ISCC se encuentra en estado Certificado</th>
+                      <th scope="col">Alcance de la certificación ISCC</th>
+                      <th scope="col">La certificación POIG se encuentra en estado Auditado</th>
+                      <th scope="col">La certificación POIG se encuentra en estado Certificado</th>
+                      <th scope="col">Alcance de la certificación POIG</th>
+                      <th scope="col">Número de certificado RSPO</th>
+                      <th scope="col">Año certificado RSPO</th>
+                      <th scope="col">Número de certificado RA</th>
+                      <th scope="col">Año certificado RA</th>
+                      <th scope="col">Número de certificado ISCC</th>
+                      <th scope="col">Año certificado ISCC</th>
+                      <th scope="col">Número de certificado POIG</th>
+                      <th scope="col">Año certificado POIG</th>
+                      <th scope="col">Otro tipo de certificación</th>
+                      <th scope="col">Número certificado</th>
+                      <th scope="col">Año de certificación</th>
+                      <th scope="col">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                      <th scope="col">Existe un compromiso o política sobre No deforestación</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">Existe un compromiso o política sobre No desarrollo en turberas</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">Existe un compromiso o política sobre No desarrollo áreas AVC-ARC</th>
+                      <th scope="col">Existe un compromiso o política sobre No uso al fuego</th>
+                      <th scope="col">Existe un compromiso o política sobre No impactos en áreas protegidas</th>
+                      <th scope="col">Existe un compromiso o política sobre Preservar la biodiversidad</th>
+                      <th scope="col">Existe un compromiso o política sobre No abastecimiento / desmonte ilegal</th>
+                      <th scope="col">Existe un compromiso o política sobre EISA</th>
+                      <th scope="col">El compromiso de No deforestación incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No desarrollo en turberas incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No desarrollo áreas AVC-ARC incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No uso al fuego incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No impactos en áreas protegidas incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Preservar la biodiversidad incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No abastecimiento / desmonte ilegal incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de EISA incluye a los proveedores externos</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de No Deforestación</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de No desarrollo en turberas</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de No desarrollo áreas AVC-ARC</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de No uso al fuego</th>
+                      <th scope="col">Existe un plan de acción  y monitoreo documentado de No impactos en áreas protegidas</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de Preservar la biodiversidad</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de No abastecimiento / desmonte ilegal</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado de EISA</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No Deforestación a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No desarrollo en turberas a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No desarrollo áreas AVC-ARC a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No uso al fuego a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No impactos en áreas protegidas a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Preservar la biodiversidad a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No abastecimiento / desmonte ilegal a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre EISA a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en No Deforestación</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en No desarrollo en turberas</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en No desarrollo áreas AVC-ARC</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en No uso al fuego</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en No impactos en áreas protegidas</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en Preservar la biodiversidad</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en No abastecimiento / desmonte ilegal</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en EISA</th>
+                      <th scope="col">El compromiso de No Deforestación, plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de No desarrollo en turberas, plan de acción y monitoreo es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de No desarrollo áreas AVC-ARC , plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de No uso al fuego, plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de No impactos en áreas protegidas, plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de Preservar la biodiversidad,  plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de No abastecimiento / desmonte ilegal, plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso de EISA, plan de acción y monitoreo  es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de No Deforestación</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de No desarrollo en turberas</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de No desarrollo áreas AVC-ARC</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de No uso al fuego</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de No impactos en áreas protegidas</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de Preservar la biodiversidad</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción  y monitoreo de No abastecimiento / desmonte ilegal</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción y monitoreo de EISA</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de No Deforestación son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de No desarrollo en turberas son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de No desarrollo áreas AVC-ARC son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de No uso al fuego son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de No impactos en áreas protegidas son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de Preservar la biodiversidad son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de No abastecimiento / desmonte ilegal son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción y monitoreo de EISA son divulgados y consultados</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para No Deforestación basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para No desarrollo en turberas basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para No desarrollo áreas AVC-ARC basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para No uso al fuego basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para No impactos en áreas protegidas basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para Preservar la biodiversidad basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para No abastecimiento / desmonte ilegal basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas para EISA basadas en los resultados de la implementación del plan de acción y monitoreo</th>
+                      <th scope="col">El plan de acción y monitoreo de No Deforestación es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de No desarrollo en turberas es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de No desarrollo áreas AVC-ARC es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de No uso al fuego es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de No impactos en áreas protegidas es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de Preservar la biodiversidad es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de No abastecimiento / desmonte ilegal es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción y monitoreo de EISA es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">¿La planta extractora o el grupo empresarial ha participado en un taller NDPE o similar?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">La certificación ISCC se encuentra en estado Auditado</th>
+                      <th scope="col">La certificación ISCC se encuentra en estado Certificado</th>
+                      <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">Si el suministro de RFF viene de plantaciones propias ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital con alertas que son tratadas a través de un mecanismo de quejas y reclamos?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">Alcance de la certificación POIG</th>
+                      <th scope="col">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos en temas relacionados con deforestación y desarrollo en turberas?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">¿La planta extractora ha sido objeto de alguna visita de verificación en sitio? (que evalué criterios relacionados con deforestación y/o turba?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">¿La planta extractora o grupo empresarial ha completado el proceso de autoevaluación de sostenibilidad?</th>
+                      <th scope="col">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">¿Las áreas AVC y ARC identificadas están siendo monitoreadas?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? (y no hay opciones de expansión)</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col"> ¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?</th>
+                      <th scope="col">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de remediación esta siendo ejecutado (si fuese necesario)?</th>
+                      <th scope="col">evidencia</th>
+                      <th scope="col">"Existe un compromiso o política de Gestión de residuos"</th>
+                      <th scope="col">"Existe un compromiso o política de mitigación GEI"</th>
+                      <th scope="col">Existe un plan documentado de Gestión de residuos</th>
+                      <th scope="col">Existe un plan documentado de mitigación GEI</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Gestión de residuos</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre mitigación GEI</th>
+                      <th scope="col">"Se cuenta con equipo interno capacitado en Gestión de residuos"</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en mitigación GEI</th>
+                      <th scope="col">El compromiso y plan  de Gestión de residuos es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de mitigación GEI es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de Gestión de residuos (mínimo una vez al año)</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de mitigación GEI (mínimo una vez al año)</th>
+                      <th scope="col">Los resultados del plan de Gestión de residuos son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de mitigación GEI son divulgados y consultados</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de Gestión de residuos</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de mitigación GEI</th>
+                      <th scope="col">El plan de Gestión de residuos es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de mitigación GEI es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">¿La empresa realiza un cálculo anual de emisión de Gases de Efecto Invernadero usando la calculadora de la RSPO u otra equivalente como ISCC?</th>
+                      <th scope="col">¿Tiene un sistema de captura y / o reducción de metano?</th>
+                      <th scope="col">¿Genera energía a partir de los efluentes generados por la planta extractora o vende estos efluentes específicamente para la generación de energía?</th>
+                      <th scope="col">¿Existe un plan de manejo de residuos que incluye el ciclo de gestión para cada residuo (incluyendo almacenaje y la retirada)</th>
+                      <th scope="col">¿Se usa químicos clasificados como Tipo 1A o 1B por la Organización Mundial de la Salud, o químicos catalogados por las convenciones de Estocolmo o Róterdam, y el paraquat?</th>
+                      <th scope="col">¿Tiene un plan para eliminar gradualmente el uso de sustancias químicas Clase 1A y / o 1B de la OMS y/ o el paraquat?</th>
+                      <th scope="col">Existe un compromiso o política sobre DDHH</th>
+                      <th scope="col">Existe un compromiso o política sobre No trabajo forzado</th>
+                      <th scope="col">Existe un compromiso o política sobre No trabajo infantil</th>
+                      <th scope="col">Existe un compromiso o política sobre Libertad de asociación</th>
+                      <th scope="col">Existe un compromiso o política sobre No discriminación</th>
+                      <th scope="col">Existe un compromiso o política sobre No acoso/abuso</th>
+                      <th scope="col">Existe un compromiso o política sobre Horas laborales legales y decentes</th>
+                      <th scope="col">Existe un compromiso o política sobre Lugares de trabajo seguros y saludables</th>
+                      <th scope="col">Existe un compromiso o política sobre Salarios dignos y beneficios justos</th>
+                      <th scope="col">El compromiso de DDHH incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No trabajo forzado incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No trabajo infantil incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Libertad de asociación incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No discriminación incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de No acoso/abuso incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Horas laborales legales y decentes incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Lugares de trabajo seguros y saludables incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Salarios dignos y beneficios justos incluye a los proveedores externos</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de DDHH</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de No trabajo forzado</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de No trabajo infantil</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de Libertad de asociación</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de No discriminación</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de No acoso/abuso</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de Horas laborales legales y decentes</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de Lugares de trabajo seguros y saludables</th>
+                      <th scope="col">Existe un plan de acción y monitoreo documentado para el cumplimiento de Salarios dignos y beneficios justos</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre DDHH a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en DDHH</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No trabajo forzado a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en No trabajo forzado</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No trabajo infantil a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en No trabajo infantil</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Libertad de asociación a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en Libertad de asociación</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No discriminación a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en No discriminación</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre No acoso/abuso a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en No acoso/abuso</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Horas laborales legales y decentes a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en Horas laborales legales y decentes.</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Lugares de trabajo seguros y saludables a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en Lugares de trabajo seguros y saludables.</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Salarios dignos y beneficios justos a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en Salarios dignos y beneficios justos.</th>
+                      <th scope="col">El compromiso y plan de acción de DDHH es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de acción de No trabajo forzado es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de acción de No trabajo infantil es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de acción de Libertad de asociación es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de No discriminación es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de No acoso/abuso es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de Horas laborales legales y decentes es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de Lugares de trabajo seguros y saludables es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">El compromiso y plan de Salarios dignos y beneficios justos es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de DDHH</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de No trabajo forzado</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de No trabajo infantil</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Libertad de asociación</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de No discriminación</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de No acoso/abuso</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Horas laborales legales y decentes</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Lugares de trabajo seguros y saludables</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Salarios dignos y beneficios justos</th>
+                      <th scope="col">Los resultados del plan de acción de DDHH son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de No trabajo forzado son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de No trabajo infantil son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de Libertad de asociación son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de No discriminación son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de No acoso/abuso son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de Horas laborales legales y decentes son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de Lugares de trabajo seguros y saludables son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de Salarios dignos y beneficios justos son divulgados y consultados</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de DDHH</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de No trabajo forzado</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de No trabajo infantil</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Libertad de asociación</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de No discriminación</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de No acoso/abuso</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Horas laborales legales y decentes</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Lugares de trabajo seguros y saludables</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Salarios dignos y beneficios justos</th>
+                      <th scope="col">El plan de acción de DDHH es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de No trabajo forzado es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de No trabajo infantil es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Libertad de asociación es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de No discriminación es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de No acoso/abuso es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Horas laborales legales y decentes es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Lugares de trabajo seguros y saludables es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Salarios dignos y beneficios justos es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">Número total de empleados hombres en la planta</th>
+                      <th scope="col">Número total de empleadas mujeres en la planta</th>
+                      <th scope="col">Número total de empleados en la planta</th>
+                      <th scope="col">Empleados hombres con salario fijo</th>
+                      <th scope="col">Empleadas mujeres con salario fijo</th>
+                      <th scope="col">Total empleados con salario fijo</th>
+                      <th scope="col">Empleados hombres contratados directamente por la compañía con contratos temporales (por temporadas o estaciones)</th>
+                      <th scope="col">Empleadas mujeres contratadas directamente por la compañía con contratos temporales (por temporadas o estaciones)</th>
+                      <th scope="col">Total del Personal contratado directamente por la compañía con contratos temporales (por temporadas o estaciones)</th>
+                      <th scope="col">Trabajadores hombres ocasionales* contratados directamente por la empresa, incluyendo los jornaleros, no fijos o informales</th>
+                      <th scope="col">Trabajadoras mujeres ocasionales* contratadas directamente por la empresa, incluyendo las jornaleras, no fijas o informales</th>
+                      <th scope="col">Total trabajadores ocasionales* contratados directamente por la empresa, incluyendo los jornaleros, no fijos o informales</th>
+                      <th scope="col">Trabajadores hombres contratados de forma indirecta a través de un intermediario, jefe, contratista o agente laboral</th>
+                      <th scope="col">Trabajadoras mujeres contratadas de forma indirecta a través de un intermediario, jefe, contratista o agente laboral</th>
+                      <th scope="col">Total trabajadores contratados de forma indirecta a través de un intermediario, jefe, contratista o agente laboral</th>
+                      <th scope="col">Número total de empleados hombres en la planta</th>
+                      <th scope="col">Número total de empleadas mujeres en la planta</th>
+                      <th scope="col">Número total de empleados en la planta</th>
+                      <th scope="col">Empleados hombres con salario fijo</th>
+                      <th scope="col">Empleadas mujeres con salario fijo</th>
+                      <th scope="col">Total empleados con salario fijo</th>
+                      <th scope="col">Empleados hombres contratados directamente por la compañía con contratos temporales (por temporadas o estaciones)</th>
+                      <th scope="col">Empleadas mujeres contratadas directamente por la compañía con contratos temporales (por temporadas o estaciones)</th>
+                      <th scope="col">Total del Personal contratado directamente por la compañía con contratos temporales (por temporadas o estaciones)</th>
+                      <th scope="col">Trabajadores hombres ocasionales* contratados directamente por la empresa, incluyendo los jornaleros, no fijos o informales</th>
+                      <th scope="col">Trabajadoras mujeres ocasionales* contratadas directamente por la empresa, incluyendo las jornaleras, no fijas o informales</th>
+                      <th scope="col">Total trabajadores ocasionales* contratados directamente por la empresa, incluyendo los jornaleros, no fijos o informales</th>
+                      <th scope="col">Trabajadores hombres contratados de forma indirecta a través de un intermediario, jefe, contratista o agente laboral</th>
+                      <th scope="col">Trabajadoras mujeres contratadas de forma indirecta a través de un intermediario, jefe, contratista o agente laboral</th>
+                      <th scope="col">Total trabajadores contratados de forma indirecta a través de un intermediario, jefe, contratista o agente laboral</th>
+                      <th scope="col">¿Es la planta o grupo empresarial parte de un acuerdo sectorial o es signatario de un protocolo que cubre los derechos laborales?</th>
+                      <th scope="col">¿Aborda la planta extractora los temas laborales en curso mediante un proceso colaborativo entre directivos y trabajadores?</th>
+                      <th scope="col">¿La planta extractora lleva un registro de los resultados de cualquier proceso colaborativo y/o de negociación entre directivos y trabajadores para abordar los temas laborales en curso?</th>
+                      <th scope="col">¿Cuenta la planta extractora con un mecanismo de quejas para los trabajadores?</th>
+                      <th scope="col">¿La planta extractora toma acciones efectivas como resultado del uso de los mecanismos de quejas para los trabajadores?</th>
+                      <th scope="col">¿Tiene la planta extractora un sistema para hacer seguimiento a la implementación de un plan de acción que aborde temas de derechos laborales para todos sus proveedores de RFF?</th>
+                      <th scope="col">¿Cuenta la planta extractora con socios externos que la apoyen en la implementación de mecanismos de voz de los trabajadores, monitoreando su eficiencia y mejoras?</th>
+                      <th scope="col">¿Tiene alguna queja relacionada con temas laborales a nivel de la planta extractora o de la compañía matriz?. En caso de tener, ¿son estas quejas reconocidas y registradas?</th>
+                      <th scope="col">¿Todas las quejas relacionadas con derechos laborales, en contra de las operaciones propias, siguen un proceso de resolución integral?</th>
+                      <th scope="col">¿Todas las quejas relacionadas con derechos laborales dentro de la cadena de suministro externa (es decir, contra su proveedores terceros ) siguen un proceso de resolución integral?</th>
+                      <th scope="col">¿La planta extractora ha participado en un proceso de autoevaluación, que incluye el componente de derechos laborales, según lo solicitado por alguna de las refinerías / empresas a las que usted abastece?</th>
+                      <th scope="col">¿La evaluación de las prácticas laborales de los pequeños productores incluye todos los compromisos consignados en la política de la planta extractora ?</th>
+                      <th scope="col">¿Ha solicitado la planta extractora a sus proveedores externos completar autoevaluaciones para identificar brechas en el cumplimiento de temas laborales?</th>
+                      <th scope="col">¿La planta extractora realiza visitas al sitio para verificar los resultados de las autoevaluaciones?</th>
+                      <th scope="col">¿Tiene la planta extractora un plan de acción desarrollado junto con sus proveedores externos para abordar los problemas laborales identificados en su cadena de suministro?</th>
+                      <th scope="col">¿Tiene la planta extractora un sistema que verifique el cumplimiento de los derechos laborales en las operaciones de los pequeños productores?</th>
+                      <th scope="col">¿Tiene la planta extractora / casa matriz un sistema para apoyar la mitigación activa y la remediación de cualquier problema relacionado con temas laborales? ¿Qué sistema tiene para apoyar la acción?</th>
+                      <th scope="col">Si tiene disponible, ¿Cuál es el sistema que verifica los derechos laborales en plantaciones de terceros?</th>
+                      <th scope="col">¿Tiene un proceso que verifica y garantiza que sus proveedores externos cuenten con un mecanismo eficaz de quejas para los trabajadores?</th>
+                      <th scope="col">¿Alguien del personal directivo de la planta ha sido parte de un taller o capacitación de NDPE sobre el respeto de los derechos humanos y/o el respeto de los derechos laborales durante los últimos 3 años?</th>
+                      <th scope="col">¿La planta extractora ha sido visitada y auditada por verificadores externos que analizan aspectos relacionados con los derechos laborales de sus trabajadores?</th>
+                      <th scope="col">¿Tiene la planta extractora compromisos establecidos (a nivel de planta o de grupo) que garanticen que se respeten los derechos de todos los trabajadores (empleados, contratistas, trabajadores de temporada, a tiempo parcial y otros) en todos los niveles de la base de suministro propia?</th>
+                      <th scope="col">¿Comunica la planta extractora sus compromisos y acciones para respetar los derechos laborales a los trabajadores en un idioma accesible que entiendan?</th>
+                      <th scope="col">¿Tiene la planta extractora un sistema implementado que mantenga un registro de todos los asuntos laborales relevantes?</th>
+                      <th scope="col">¿Ha realizado la planta extractora una evaluación de riesgos que incluya examinar los desafíos de los derechos laborales?</th>
+                      <th scope="col">¿Cuenta la planta extractora con un sistema que garantice el apoyo regular y directo de sus directivos a todos los trabajadores en los distintos niveles, así como a organizaciones operacionales, sindicatos y otros defensores de los trabajadores?</th>
+                      <th scope="col">Existe un compromiso o política sobre Derechos de la tierra</th>
+                      <th scope="col">Existe un compromiso o política sobre Consentimiento Libre Previo e Informado (CLIP)</th>
+                      <th scope="col">Existe un compromiso o política sobre Preservar los valores culturales (AVC 6)</th>
+                      <th scope="col">Existe un compromiso o política sobre Respetar los derechos de líderes comunitarios/defensores de DDHH</th>
+                      <th scope="col">El compromiso de Derechos de la tierra incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Consentimiento Libre Previo e Informado (CLIP) incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Preservar los valores culturales (AVC 6) incluye a los proveedores externos</th>
+                      <th scope="col">El compromiso de Respetar los derechos de líderes comunitarios/defensores de DDHH incluye a los proveedores externos</th>
+                      <th scope="col">Existe un plan de acción documentado sobre Derechos de la tierra</th>
+                      <th scope="col">Existe un plan de acción documentado sobre Consentimiento Libre Previo e Informado (CLIP)</th>
+                      <th scope="col">Existe un plan de acción documentado sobre Preservar los valores culturales (AVC 6)</th>
+                      <th scope="col">Existe un plan de acción documentado sobre Respetar los derechos de líderes comunitarios/defensores de DDHH</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Derechos de la tierra a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Consentimiento Libre Previo e Informado (CLIP) a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Preservar los valores culturales (AVC 6) a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se realizan capacitaciones y entrenamientos documentados sobre Respetar los derechos de líderes comunitarios/defensores de DDHH a la fuerza laboral y grupos de interés</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en Derechos de la tierra y recursos asignados</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en Consentimiento Libre Previo e Informado (CLIP) y recursos asignados</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en Preservar los valores culturales (AVC 6) y recursos asignados</th>
+                      <th scope="col">Se cuenta con equipo interno capacitado en Respetar los derechos de líderes comunitarios/defensores de DDHH y recursos asignados</th>
+                      <th scope="col">El compromiso y plan de acción de Derechos de la tierra es divulgado y consultado con la fuerza laboral y grupos de interés (proveedores y comunidades locales en su zona de influencia)</th>
+                      <th scope="col">El compromiso y plan de acción de Consentimiento Libre Previo e Informado (CLIP) es divulgado y consultado con la fuerza laboral y grupos de interés (proveedores y comunidades locales en su zona de influencia)</th>
+                      <th scope="col">El compromiso y plan de acción de Preservar los valores culturales (AVC 6) es divulgado y consultado con la fuerza laboral y grupos de interés (proveedores y comunidades locales en su zona de influencia)</th>
+                      <th scope="col">El compromiso y plan de acción de Respetar los derechos de líderes comunitarios/defensores de DDHH es divulgado y consultado con la fuerza laboral y grupos de interés (proveedores y comunidades locales en su zona de influencia)</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Derechos de la tierra</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Consentimiento Libre Previo e Informado (CLIP)</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Preservar los valores culturales (AVC 6)</th>
+                      <th scope="col">Se realiza seguimiento de la implementación del plan de acción de Respetar los derechos de líderes comunitarios/defensores de DDHH</th>
+                      <th scope="col">Los resultados del plan de acción de Derechos de la tierra son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de Consentimiento Libre Previo e Informado (CLIP) son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción Preservar los valores culturales (AVC 6) son divulgados y consultados</th>
+                      <th scope="col">Los resultados del plan de acción de Respetar los derechos de líderes comunitarios/defensores de DDHH son divulgados y consultados</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Derechos de la tierra</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Consentimiento Libre Previo e Informado (CLIP)</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Preservar los valores culturales (AVC 6)</th>
+                      <th scope="col">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de Respetar los derechos de líderes comunitarios/defensores de DDHH</th>
+                      <th scope="col">El plan de acción de Derechos de la tierra es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Consentimiento Libre Previo e Informado (CLIP) es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Preservar los valores culturales (AVC 6) es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">El plan de acción de Respetar los derechos de líderes comunitarios/defensores de DDHH es actualizado (mínimo una vez al año)</th>
+                      <th scope="col">¿La planta ha participado de un taller de NDPE o similar que haya incluido el tema de derechos sobre la tierra?</th>
+                      <th scope="col">¿La planta tiene un proceso / procedimiento operacional de debida diligencia que le permita identificar, prevenir, mitigar y dar cuenta de manera efectiva de cómo aborda los problemas de derechos sobre la tierra en sus operaciones y cadena de suministro de manera continua? (ver orientación)</th>
+                      <th scope="col">¿La planta tiene personal y recursos asignados para gestionar los asuntos relacionados con los derechos de la tierra y realizar involucramiento con la comunidad?</th>
+                      <th scope="col">¿La planta y / o la empresa matriz tienen procedimientos operativos (para nuevas adquisiciones de tierras, desarrollos de palma de aceite y otros cambios de uso de la tierra) que aseguren el respeto de los derechos de todos los titulares legítimos de la tierra y que se adhieren a los principios del consentimiento libre, previo e informado (CLPI) para los pueblos indígenas y / o comunidades locales? (ver orientación)</th>
+                      <th scope="col">¿Tiene la planta y / o la casa matriz un compromiso y / o procedimiento para llevar a cabo una Evaluación de Impacto Social y Ambiental (EISA) antes de cualquier cambio de uso de la tierra, limpieza o preparación de la tierra? (ver orientación)</th>
+                      <th scope="col">¿La planta y / o la empresa matriz tienen el compromiso de no adquirir, utilizar o arrendar tierras o recursos que estén sujetos a conflictos permanentes?</th>
+                      <th scope="col">¿Tiene la planta y sus plantaciones evidencia de el derecho legítimo a usar la tierra donde tiene sus operaciones?</th>
+                      <th scope="col">¿Tiene la planta pruebas de que el CLPI se ha obtenido de los pueblos indígenas y / o comunidades locales que pudieron ser afectadas por sus operaciones?</th>
+                      <th scope="col">En el caso de que no se hayan llevado a cabo los procesos adecuados para obtener el CLPI antes del cambio de uso de la tierra, ¿la planta ha evaluado, remediado y/o resuelto las quejas relacionadas con el cambio de uso de la tierra (si las hubiera)?</th>
+                      <th scope="col">¿Tiene la planta pruebas de que se llevó a cabo una EISA antes de cualquier cambio de uso de la tierra?</th>
+                      <th scope="col">¿En que año se realizo el EISA?</th>
+                      <th scope="col">¿La planta extractora ha sido objeto de una visita en sitio, que incluya un componente de derechos sobre la tierra? (ver orientación) </th>
+                      <th scope="col">Si la planta no realizó una EIS independiente antes del cambio de uso de la tierra, ¿está implementando un plan de remediación y mitigación para los impactos ambientales y sociales pasados y actuales (si corresponde)?</th>
+                      <th scope="col">¿La planta ha establecido algún compromiso a los proveedores externos de los que se abastece para garantizar el respeto de los derechos sobre la tierra?</th>
+                      <th scope="col">¿Tiene la planta pruebas de que las propiedades de proveedores externos de las que se abastece tienen derecho legítimo a usar la tierra?</th>
+                      <th scope="col">¿Tiene la planta pruebas de que los proveedores externos de los que se abastece están implementando los requisitos sobre el respeto de los derechos sobre la tierra se les ha comunicado?</th>
+                      <th scope="col">¿Se ha asegurado la planta de que no hay conflictos o disputas asociados con la tierra utilizada por los pequeños productores independientes de los que se abastece?</th>
+                      <th scope="col">¿Tiene la planta un programa de trabajo o apoyo con los pequeños productores que incluya un componente de derechos sobre la tierra?</th>
+                      <th scope="col">¿La planta está verificando y asegurando que los RFF que recibe de los intermediarios cumplen con sus compromisos de derechos sobre la tierra?</th>
+                      <th scope="col">¿Tiene la planta algún reclamo relacionado con los derechos de la tierra contra sus propias operaciones o su cadena de suministro?</th>
+                      <th scope="col">¿Son estas quejas reconocidas y registradas por la planta?</th>
+                      <th scope="col">¿Están todas las quejas relacionadas con los derechos de la tierra contra las propias operaciones de la planta extractora siguiendo un proceso de resolución integral acordado por todas las partes involucradas?</th>
+                      <th scope="col">¿La planta ha completado una autoevaluación que incluya un componente de derechos sobre la tierra?</th>
+                      <th scope="col">¿Están todas las quejas relacionadas con los derechos de la tierra, dentro de la cadena de suministro externa (es decir, contra el suministro de terceros), siguiendo un proceso de resolución integral acordado por todas las partes involucradas?</th>
+                      <th scope="col">¿Tiene la planta o su casa matriz compromisos sobre derechos de la tierra, que incluyan los elementos señalados en la orientación?</th>
+                      <th scope="col">¿La planta extractora ha comunicado públicamente sus compromisos sobre derechos sobre la tierra, incluso con sus proveedores y todas las comunidades locales potencialmente afectadas por sus operaciones y cadena de suministro? (ver orientación)</th>
+                      <th scope="col">¿Se ha capacitado a los miembros del personal involucrados sobre la política de derechos a la tierra y el compromiso entre la empresa y la comunidad?</th>
+                      <th scope="col">¿La planta ha realizado evaluaciones sobre los impactos potenciales que sus operaciones y su cadena de suministro están teniendo sobre los derechos sobre la tierra? (ver orientación)</th>
+                      <th scope="col">¿La planta tiene un plan de acción para garantizar el respeto de los derechos sobre la tierra de todos los titulares legítimos de la tenencia de la tierra y afectados dentro de sus operaciones y cadena de suministro? (ver orientación)</th>
+                      <th scope="col">¿La planta tiene un mecanismo de reclamo operativo que pueda recibir y resolver eficazmente los problemas o quejas planteados por cualquier individuo o grupo afectado por las operaciones y la cadena de suministro ? (ver orientación)</th>
+                      <th scope="col">¿Compró RFF en otro país durante el período de reporte?</th>
+                      <th scope="col">¿Tiene un sistema para garantizar la trazabilidad?</th>
+                      <th scope="col">Porcentaje (%) de trazabilidad a plantación (TTP) logrado hasta la fecha. No utilice separadores como comas (,) o puntos (.).</th>
+                      <th scope="col">¿Compró a otras plantas extractoras durante el periodo de reporte?</th>
+                      <th scope="col">Producción certificada (RSPO) en RFF en toneladas métricas (Tm) durante el periodo de reporte.</th>
+                      <th scope="col">Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte</th>
+                      <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte.</th>
+                      <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PROVEEDORES EXTERNOS GRANDES (mayores de 50 hectáreas) durante el periodo de reporte.</th>
+                      <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PROVEEDORES EXTERNOS PEQUEÑOS (menores de 50 hectáreas) durante el periodo de reporte</th>
+                      <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de INTERMEDIARIOS (centros independientes de recolección y distribuidores) durante el periodo de reporte.</th>
+                      <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTAS EXTRACTORAS (Incluyendo volúmenes que se procesan por medio de maquilas) durante el periodo de reporte.</th>
+                      <th scope="col">trazabilidad</th>
+                      <th scope="col">Poligonos</th>
+                      <th scope="col">ano</th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacion of informacionCorreo">
+                    <td>{{informacion.codEmpresa}}</td>
+                    <td>{{informacion.id}}</td>
+                    <td>{{informacion.materiaPrima}}</td>
+                    <td>{{informacion.grupoEmpresarial}}</td>
+                    <td>{{informacion.millName}}</td>
+                    <td>{{informacion.nombreLegal}}</td>
+                    <td>{{informacion.sitioWeb}}</td>
+                    <td>{{informacion.capacidadProducion}}</td>
+                    <td>{{informacion.nombres}}</td>
+                    <td>{{informacion.apellidos}}</td>
+                    <td>{{informacion.paisRecidencia}}</td>
+                    <td>{{informacion.telefono}}</td>
+                    <td>{{informacion.correoElectronico}}</td>
+                    <td>{{informacion.cargo}}</td>
+                    <td>{{informacion.pais}}</td>
+                    <td>{{informacion.departamento}}</td>
+                    <td>{{informacion.municipio}}</td>
+                    <td>{{informacion.coordenadas}}</td>
+                    <td>{{informacion.go1}}</td>
+                    <td>{{informacion.go2}}</td>
+                    <td>{{informacion.go3}}</td>
+                    <td>{{informacion.go4}}</td>
+                    <td>{{informacion.go5}}</td>
+                    <td>{{informacion.go6}}</td>
+                    <td>{{informacion.go7}}</td>
+                    <td>{{informacion.go8}}</td>
+                    <td>{{informacion.go9}}</td>
+                    <td>{{informacion.go10}}</td>
+                    <td>{{informacion.go11}}</td>
+                    <td>{{informacion.go12}}</td>
+                    <td>{{informacion.go13}}</td>
+                    <td>{{informacion.go14}}</td>
+                    <td>{{informacion.go15}}</td>
+                    <td>{{informacion.go16}}</td>
+                    <td>{{informacion.go17}}</td>
+                    <td>{{informacion.go18}}</td>
+                    <td>{{informacion.go19}}</td>
+                    <td>{{informacion.go20}}</td>
+                    <td>{{informacion.go21}}</td>
+                    <td>{{informacion.go22}}</td>
+                    <td>{{informacion.go23}}</td>
+                    <td>{{informacion.go24}}</td>
+                    <td>{{informacion.go25}}</td>
+                    <td>{{informacion.go26}}</td>
+                    <td>{{informacion.go27}}</td>
+                    <td>{{informacion.go28}}</td>
+                    <td>{{informacion.go29}}</td>
+                    <td>{{informacion.go30}}</td>
+                    <td>{{informacion.go31}}</td>
+                    <td>{{informacion.go32}}</td>
+                    <td>{{informacion.go33}}</td>
+                    <td>{{informacion.go34}}</td>
+                    <td>{{informacion.go35}}</td>
+                    <td>{{informacion.go36}}</td>
+                    <td>{{informacion.go37}}</td>
+                    <td>{{informacion.go38}}</td>
+                    <td>{{informacion.go39}}</td>
+                    <td>{{informacion.go40}}</td>
+                    <td>{{informacion.go41}}</td>
+                    <td>{{informacion.go42}}</td>
+                    <td>{{informacion.go43}}</td>
+                    <td>{{informacion.go44}}</td>
+                    <td>{{informacion.go45}}</td>
+                    <td>{{informacion.go46}}</td>
+                    <td>{{informacion.go47}}</td>
+                    <td>{{informacion.go48}}</td>
+                    <td>{{informacion.go49}}</td>
+                    <td>{{informacion.go50}}</td>
+                    <td>{{informacion.go51}}</td>
+                    <td>{{informacion.go52}}</td>
+                    <td>{{informacion.go53}}</td>
+                    <td>{{informacion.go54}}</td>
+                    <td>{{informacion.go55}}</td>
+                    <td>{{informacion.go56}}</td>
+                    <td>{{informacion.go57}}</td>
+                    <td>{{informacion.go58}}</td>
+                    <td>{{informacion.go59}}</td>
+                    <td>{{informacion.go60}}</td>
+                    <td>{{informacion.go61}}</td>
+                    <td>{{informacion.go62}}</td>
+                    <td>{{informacion.go63}}</td>
+                    <td>{{informacion.go64}}</td>
+                    <td>{{informacion.go65}}</td>
+                    <td>{{informacion.go66}}</td>
+                    <td>{{informacion.go67}}</td>
+                    <td>{{informacion.go68}}</td>
+                    <td>{{informacion.go69}}</td>
+                    <td>{{informacion.go70}}</td>
+                    <td>{{informacion.go75}}</td>
+                    <td>{{informacion.go76}}</td>
+                    <td>{{informacion.go77}}</td>
+                    <td>{{informacion.go78}}</td>
+                    <td>{{informacion.go79}}</td>
+                    <td>{{informacion.go80}}</td>
+                    <td>{{informacion.go81}}</td>
+                    <td>{{informacion.go82}}</td>
+                    <td>{{informacion.go83}}</td>
+                    <td>{{informacion.go84}}</td>
+                    <td>{{informacion.go85}}</td>
+                    <td>{{informacion.go86}}</td>
+                    <td>{{informacion.go87}}</td>
+                    <td>{{informacion.go88}}</td>
+                    <td>{{informacion.go89}}</td>
+                    <td>{{informacion.go90}}</td>
+                    <td>{{informacion.go91}}</td>
+                    <td>{{informacion.go92}}</td>
+                    <td>{{informacion.go93}}</td>
+                    <td>{{informacion.go94}}</td>
+                    <td>{{informacion.go95}}</td>
+                    <td>{{informacion.go96}}</td>
+                    <td>{{informacion.go97}}</td>
+                    <td>{{informacion.go98}}</td>
+                    <td>{{informacion.go99}}</td>
+                    <td>{{informacion.ta1}}</td>
+                    <td>{{informacion.evidenciata1}}</td>
+                    <td>{{informacion.ta2}}</td>
+                    <td>{{informacion.evidenciata2}}</td>
+                    <td>{{informacion.ta3}}</td>
+                    <td>{{informacion.ta4}}</td>
+                    <td>{{informacion.ta5}}</td>
+                    <td>{{informacion.ta6}}</td>
+                    <td>{{informacion.ta7}}</td>
+                    <td>{{informacion.ta8}}</td>
+                    <td>{{informacion.ta9}}</td>
+                    <td>{{informacion.ta10}}</td>
+                    <td>{{informacion.ta11}}</td>
+                    <td>{{informacion.ta12}}</td>
+                    <td>{{informacion.ta13}}</td>
+                    <td>{{informacion.ta14}}</td>
+                    <td>{{informacion.ta15}}</td>
+                    <td>{{informacion.ta16}}</td>
+                    <td>{{informacion.ta17}}</td>
+                    <td>{{informacion.evidenciata17}}</td>
+                    <td>{{informacion.ta18}}</td>
+                    <td>{{informacion.evidenciata18}}</td>
+                    <td>{{informacion.ta19}}</td>
+                    <td>{{informacion.ta20}}</td>
+                    <td>{{informacion.ta21}}</td>
+                    <td>{{informacion.ta22}}</td>
+                    <td>{{informacion.ta23}}</td>
+                    <td>{{informacion.ta24}}</td>
+                    <td>{{informacion.ta25}}</td>
+                    <td>{{informacion.ta26}}</td>
+                    <td>{{informacion.ta27}}</td>
+                    <td>{{informacion.ta28}}</td>
+                    <td>{{informacion.ta29}}</td>
+                    <td>{{informacion.ta30}}</td>
+                    <td>{{informacion.ta31}}</td>
+                    <td>{{informacion.ta32}}</td>
+                    <td>{{informacion.ta33}}</td>
+                    <td>{{informacion.ta34}}</td>
+                    <td>{{informacion.ta35}}</td>
+                    <td>{{informacion.ta36}}</td>
+                    <td>{{informacion.ta37}}</td>
+                    <td>{{informacion.ta38}}</td>
+                    <td>{{informacion.ta39}}</td>
+                    <td>{{informacion.ta40}}</td>
+                    <td>{{informacion.ta41}}</td>
+                    <td>{{informacion.ta42}}</td>
+                    <td>{{informacion.ta43}}</td>
+                    <td>{{informacion.ta44}}</td>
+                    <td>{{informacion.ta45}}</td>
+                    <td>{{informacion.ta46}}</td>
+                    <td>{{informacion.ta47}}</td>
+                    <td>{{informacion.ta48}}</td>
+                    <td>{{informacion.ta49}}</td>
+                    <td>{{informacion.ta50}}</td>
+                    <td>{{informacion.ta51}}</td>
+                    <td>{{informacion.ta52}}</td>
+                    <td>{{informacion.ta53}}</td>
+                    <td>{{informacion.ta54}}</td>
+                    <td>{{informacion.ta55}}</td>
+                    <td>{{informacion.ta56}}</td>
+                    <td>{{informacion.ta57}}</td>
+                    <td>{{informacion.ta58}}</td>
+                    <td>{{informacion.ta59}}</td>
+                    <td>{{informacion.ta60}}</td>
+                    <td>{{informacion.ta61}}</td>
+                    <td>{{informacion.ta62}}</td>
+                    <td>{{informacion.ta63}}</td>
+                    <td>{{informacion.ta64}}</td>
+                    <td>{{informacion.ta65}}</td>
+                    <td>{{informacion.ta66}}</td>
+                    <td>{{informacion.ta67}}</td>
+                    <td>{{informacion.ta68}}</td>
+                    <td>{{informacion.ta69}}</td>
+                    <td>{{informacion.ta70}}</td>
+                    <td>{{informacion.ta71}}</td>
+                    <td>{{informacion.ta72}}</td>
+                    <td>{{informacion.ta73}}</td>
+                    <td>{{informacion.ta74}}</td>
+                    <td>{{informacion.ta75}}</td>
+                    <td>{{informacion.ta76}}</td>
+                    <td>{{informacion.ta77}}</td>
+                    <td>{{informacion.ta78}}</td>
+                    <td>{{informacion.ta79}}</td>
+                    <td>{{informacion.ta80}}</td>
+                    <td>{{informacion.ta81}}</td>
+                    <td>{{informacion.evidenciata81}}</td>
+                    <td>{{informacion.ta82}}</td>
+                    <td>{{informacion.ta83}}</td>
+                    <td>{{informacion.ta84}}</td>
+                    <td>{{informacion.evidenciata84}}</td>
+                    <td>{{informacion.ta85}}</td>
+                    <td>{{informacion.evidenciata85}}</td>
+                    <td>{{informacion.ta86}}</td>
+                    <td>{{informacion.evidenciata86}}</td>
+                    <td>{{informacion.ta87}}</td>
+                    <td>{{informacion.ta88}}</td>
+                    <td>{{informacion.evidenciata88}}</td>
+                    <td>{{informacion.ta89}}</td>
+                    <td>{{informacion.evidenciata89}}</td>
+                    <td>{{informacion.ta90}}</td>
+                    <td>{{informacion.ta91}}</td>
+                    <td>{{informacion.evidenciata91}}</td>
+                    <td>{{informacion.ta92}}</td>
+                    <td>{{informacion.evidenciata92}}</td>
+                    <td>{{informacion.ta93}}</td>
+                    <td>{{informacion.evidenciata93}}</td>
+                    <td>{{informacion.ta94}}</td>
+                    <td>{{informacion.ta95}}</td>
+                    <td>{{informacion.evidenciata95}}</td>
+                    <td>{{informacion.ta96}}</td>
+                    <td>{{informacion.evidenciata96}}</td>
+                    <td>{{informacion.ta97}}</td>
+                    <td>{{informacion.ta98}}</td>
+                    <td>{{informacion.ta99}}</td>
+                    <td>{{informacion.ta100}}</td>
+                    <td>{{informacion.ta101}}</td>
+                    <td>{{informacion.ta102}}</td>
+                    <td>{{informacion.ta103}}</td>
+                    <td>{{informacion.ta104}}</td>
+                    <td>{{informacion.ta105}}</td>
+                    <td>{{informacion.ta106}}</td>
+                    <td>{{informacion.ta107}}</td>
+                    <td>{{informacion.ta108}}</td>
+                    <td>{{informacion.ta109}}</td>
+                    <td>{{informacion.ta110}}</td>
+                    <td>{{informacion.ta111}}</td>
+                    <td>{{informacion.ta112}}</td>
+                    <td>{{informacion.ta113}}</td>
+                    <td>{{informacion.ta114}}</td>
+                    <td>{{informacion.ta115}}</td>
+                    <td>{{informacion.ta116}}</td>
+                    <td>{{informacion.ta117}}</td>
+                    <td>{{informacion.ta118}}</td>
+                    <td>{{informacion.ta119}}</td>
+                    <td>{{informacion.ta120}}</td>
+                    <td>{{informacion.ts1}}</td>
+                    <td>{{informacion.ts2}}</td>
+                    <td>{{informacion.ts3}}</td>
+                    <td>{{informacion.ts4}}</td>
+                    <td>{{informacion.ts5}}</td>
+                    <td>{{informacion.ts6}}</td>
+                    <td>{{informacion.ts7}}</td>
+                    <td>{{informacion.ts8}}</td>
+                    <td>{{informacion.ts9}}</td>
+                    <td>{{informacion.ts10}}</td>
+                    <td>{{informacion.ts11}}</td>
+                    <td>{{informacion.ts12}}</td>
+                    <td>{{informacion.ts13}}</td>
+                    <td>{{informacion.ts14}}</td>
+                    <td>{{informacion.ts15}}</td>
+                    <td>{{informacion.ts16}}</td>
+                    <td>{{informacion.ts17}}</td>
+                    <td>{{informacion.ts18}}</td>
+                    <td>{{informacion.ts19}}</td>
+                    <td>{{informacion.ts20}}</td>
+                    <td>{{informacion.ts21}}</td>
+                    <td>{{informacion.ts22}}</td>
+                    <td>{{informacion.ts23}}</td>
+                    <td>{{informacion.ts24}}</td>
+                    <td>{{informacion.ts25}}</td>
+                    <td>{{informacion.ts26}}</td>
+                    <td>{{informacion.ts27}}</td>
+                    <td>{{informacion.ts28}}</td>
+                    <td>{{informacion.ts29}}</td>
+                    <td>{{informacion.ts30}}</td>
+                    <td>{{informacion.ts31}}</td>
+                    <td>{{informacion.ts32}}</td>
+                    <td>{{informacion.ts33}}</td>
+                    <td>{{informacion.ts34}}</td>
+                    <td>{{informacion.ts35}}</td>
+                    <td>{{informacion.ts36}}</td>
+                    <td>{{informacion.ts37}}</td>
+                    <td>{{informacion.ts38}}</td>
+                    <td>{{informacion.ts39}}</td>
+                    <td>{{informacion.ts40}}</td>
+                    <td>{{informacion.ts41}}</td>
+                    <td>{{informacion.ts42}}</td>
+                    <td>{{informacion.ts43}}</td>
+                    <td>{{informacion.ts44}}</td>
+                    <td>{{informacion.ts45}}</td>
+                    <td>{{informacion.ts46}}</td>
+                    <td>{{informacion.ts47}}</td>
+                    <td>{{informacion.ts48}}</td>
+                    <td>{{informacion.ts49}}</td>
+                    <td>{{informacion.ts50}}</td>
+                    <td>{{informacion.ts51}}</td>
+                    <td>{{informacion.ts52}}</td>
+                    <td>{{informacion.ts53}}</td>
+                    <td>{{informacion.ts54}}</td>
+                    <td>{{informacion.ts55}}</td>
+                    <td>{{informacion.ts56}}</td>
+                    <td>{{informacion.ts57}}</td>
+                    <td>{{informacion.ts58}}</td>
+                    <td>{{informacion.ts59}}</td>
+                    <td>{{informacion.ts60}}</td>
+                    <td>{{informacion.ts61}}</td>
+                    <td>{{informacion.ts62}}</td>
+                    <td>{{informacion.ts63}}</td>
+                    <td>{{informacion.ts64}}</td>
+                    <td>{{informacion.ts65}}</td>
+                    <td>{{informacion.ts66}}</td>
+                    <td>{{informacion.ts67}}</td>
+                    <td>{{informacion.ts68}}</td>
+                    <td>{{informacion.ts69}}</td>
+                    <td>{{informacion.ts70}}</td>
+                    <td>{{informacion.ts71}}</td>
+                    <td>{{informacion.ts72}}</td>
+                    <td>{{informacion.ts73}}</td>
+                    <td>{{informacion.ts74}}</td>
+                    <td>{{informacion.ts75}}</td>
+                    <td>{{informacion.ts76}}</td>
+                    <td>{{informacion.ts77}}</td>
+                    <td>{{informacion.ts78}}</td>
+                    <td>{{informacion.ts79}}</td>
+                    <td>{{informacion.ts80}}</td>
+                    <td>{{informacion.ts81}}</td>
+                    <td>{{informacion.ts82}}</td>
+                    <td>{{informacion.ts83}}</td>
+                    <td>{{informacion.ts84}}</td>
+                    <td>{{informacion.ts85}}</td>
+                    <td>{{informacion.ts86}}</td>
+                    <td>{{informacion.ts87}}</td>
+                    <td>{{informacion.ts88}}</td>
+                    <td>{{informacion.ts89}}</td>
+                    <td>{{informacion.ts90}}</td>
+                    <td>{{informacion.ts91}}</td>
+                    <td>{{informacion.ts92}}</td>
+                    <td>{{informacion.ts93}}</td>
+                    <td>{{informacion.ts94}}</td>
+                    <td>{{informacion.ts95}}</td>
+                    <td>{{informacion.ts96}}</td>
+                    <td>{{informacion.ts97}}</td>
+                    <td>{{informacion.ts98}}</td>
+                    <td>{{informacion.ts99}}</td>
+                    <td>{{informacion.ts100}}</td>
+                    <td>{{informacion.ts101}}</td>
+                    <td>{{informacion.ts102}}</td>
+                    <td>{{informacion.ts103}}</td>
+                    <td>{{informacion.ts104}}</td>
+                    <td>{{informacion.ts105}}</td>
+                    <td>{{informacion.ts106}}</td>
+                    <td>{{informacion.ts107}}</td>
+                    <td>{{informacion.ts108}}</td>
+                    <td>{{informacion.ts109}}</td>
+                    <td>{{informacion.ts110}}</td>
+                    <td>{{informacion.ts111}}</td>
+                    <td>{{informacion.ts112}}</td>
+                    <td>{{informacion.ts113}}</td>
+                    <td>{{informacion.ts114}}</td>
+                    <td>{{informacion.ts115}}</td>
+                    <td>{{informacion.ts116}}</td>
+                    <td>{{informacion.ts117}}</td>
+                    <td>{{informacion.ts118}}</td>
+                    <td>{{informacion.ts119}}</td>
+                    <td>{{informacion.ts120}}</td>
+                    <td>{{informacion.ts121}}</td>
+                    <td>{{informacion.ts122}}</td>
+                    <td>{{informacion.ts123}}</td>
+                    <td>{{informacion.ts124}}</td>
+                    <td>{{informacion.ts125}}</td>
+                    <td>{{informacion.ts126}}</td>
+                    <td>{{informacion.ts127}}</td>
+                    <td>{{informacion.ts128}}</td>
+                    <td>{{informacion.ts129}}</td>
+                    <td>{{informacion.ts130}}</td>
+                    <td>{{informacion.ts131}}</td>
+                    <td>{{informacion.ts132}}</td>
+                    <td>{{informacion.ts133}}</td>
+                    <td>{{informacion.ts134}}</td>
+                    <td>{{informacion.ts135}}</td>
+                    <td>{{informacion.ts136}}</td>
+                    <td>{{informacion.ts137}}</td>
+                    <td>{{informacion.ts138}}</td>
+                    <td>{{informacion.ts139}}</td>
+                    <td>{{informacion.ts140}}</td>
+                    <td>{{informacion.ts141}}</td>
+                    <td>{{informacion.ts142}}</td>
+                    <td>{{informacion.ts143}}</td>
+                    <td>{{informacion.ts144}}</td>
+                    <td>{{informacion.ts145}}</td>
+                    <td>{{informacion.ts146}}</td>
+                    <td>{{informacion.ts147}}</td>
+                    <td>{{informacion.ts148}}</td>
+                    <td>{{informacion.ts149}}</td>
+                    <td>{{informacion.ts150}}</td>
+                    <td>{{informacion.ts151}}</td>
+                    <td>{{informacion.ts152}}</td>
+                    <td>{{informacion.ts153}}</td>
+                    <td>{{informacion.ts154}}</td>
+                    <td>{{informacion.ts155}}</td>
+                    <td>{{informacion.ts156}}</td>
+                    <td>{{informacion.ts157}}</td>
+                    <td>{{informacion.ts158}}</td>
+                    <td>{{informacion.ts159}}</td>
+                    <td>{{informacion.ts160}}</td>
+                    <td>{{informacion.ts161}}</td>
+                    <td>{{informacion.ts162}}</td>
+                    <td>{{informacion.ts163}}</td>
+                    <td>{{informacion.ts164}}</td>
+                    <td>{{informacion.ts165}}</td>
+                    <td>{{informacion.ts166}}</td>
+                    <td>{{informacion.ts167}}</td>
+                    <td>{{informacion.ts168}}</td>
+                    <td>{{informacion.ts169}}</td>
+                    <td>{{informacion.ts170}}</td>
+                    <td>{{informacion.ts171}}</td>
+                    <td>{{informacion.ts172}}</td>
+                    <td>{{informacion.ts173}}</td>
+                    <td>{{informacion.ts174}}</td>
+                    <td>{{informacion.ts175}}</td>
+                    <td>{{informacion.ts176}}</td>
+                    <td>{{informacion.ts177}}</td>
+                    <td>{{informacion.ts178}}</td>
+                    <td>{{informacion.ts179}}</td>
+                    <td>{{informacion.ts180}}</td>
+                    <td>{{informacion.ts181}}</td>
+                    <td>{{informacion.ts182}}</td>
+                    <td>{{informacion.ts183}}</td>
+                    <td>{{informacion.ts184}}</td>
+                    <td>{{informacion.ts185}}</td>
+                    <td>{{informacion.ts186}}</td>
+                    <td>{{informacion.ts187}}</td>
+                    <td>{{informacion.ts188}}</td>
+                    <td>{{informacion.ts189}}</td>
+                    <td>{{informacion.ts190}}</td>
+                    <td>{{informacion.ts191}}</td>
+                    <td>{{informacion.ts192}}</td>
+                    <td>{{informacion.ts193}}</td>
+                    <td>{{informacion.ts194}}</td>
+                    <td>{{informacion.ts195}}</td>
+                    <td>{{informacion.ts196}}</td>
+                    <td>{{informacion.ts197}}</td>
+                    <td>{{informacion.ts198}}</td>
+                    <td>{{informacion.ts199}}</td>
+                    <td>{{informacion.ts200}}</td>
+                    <td>{{informacion.ts201}}</td>
+                    <td>{{informacion.ts202}}</td>
+                    <td>{{informacion.ts203}}</td>
+                    <td>{{informacion.ts204}}</td>
+                    <td>{{informacion.ts205}}</td>
+                    <td>{{informacion.ts206}}</td>
+                    <td>{{informacion.ts207}}</td>
+                    <td>{{informacion.tz1}}</td>
+                    <td>{{informacion.tz2}}</td>
+                    <td>{{informacion.tz3}}</td>
+                    <td>{{informacion.tz4}}</td>
+                    <td>{{informacion.tz5}}</td>
+                    <td>{{informacion.tz6}}</td>
+                    <td>{{informacion.tz7}}</td>
+                    <td>{{informacion.tz8}}</td>
+                    <td>{{informacion.tz9}}</td>
+                    <td>{{informacion.tz10}}</td>
+                    <td>{{informacion.tz11}}</td>
+                    <td>{{informacion.trazabilidad}}</td>
+                    <td>{{informacion.evidenciatz111}}</td>
+                    <td>{{informacion.ano}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

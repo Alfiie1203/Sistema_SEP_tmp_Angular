@@ -1,0 +1,34 @@
+<app-menu></app-menu>
+<div *ngIf="userLogged|async as user" class="container mt-4">
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <span class="h3">Listado de respuestas</span>
+            <button (click)="exportexcel()" class="btn btn-success btn-lg float-right">Agregar</button>
+            <table class="table table-striped mt-4" id="excel-table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Materia Prima</th>
+                    <th scope="col">Nombre Legal</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacion of informacion">
+                    <td>{{informacion.id}}</td>
+                    <td>{{informacion.materiaPrima}}</td>                    
+                    <td>{{informacion.nombreLegal}}</td>
+                    <td>{{informacion.nombres}}</td> 
+                    <td>{{informacion.apellidos}}</td>
+                    <td>{{informacion.correoElectronico}}</td>
+                    <td><button type="button" class="btn btn-info2">Actualizar</button>
+                        <button type="button" (click)="eliminar(informacion.id)" class="btn btn-danger">Eliminar</button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

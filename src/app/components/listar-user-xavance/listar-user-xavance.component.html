@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div *ngIf="userLogged|async as user" class="container mt-4">
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <span class="h3">Listado de respuestas</span>
+            <button (click)="exportexcel()" class="btn btn-success btn-lg float-right">Agregar</button>
+            <table class="table table-striped mt-4" id="excel-table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Informacion Compañia</th>
+                    <th scope="col">Gobernanza</th>
+                    <th scope="col">Temas Ambientales</th>
+                    <th scope="col">Temas Sociales Parte1</th>
+                    <th scope="col">Temas Sociales Parte2</th>
+                    <th scope="col">trazabilidad</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacion of informacion">
+                    <td>{{informacion.email}}</td>
+                    <td>{{informacion.usuario}}</td>
+                    <td>{{informacion.infoCompania}}</td>
+                    <td>{{informacion.gobernanza}}</td> 
+                    <td>{{informacion.temasAmbientales}}</td>
+                    <td>{{informacion.temasSocialesParte1}}</td>
+                    <td>{{informacion.temasSocialesParte2}}</td>                    
+                    <td>{{informacion.trazabilidad}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1687 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+    <nav *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-compania/',id]">Información de la compañía</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gobernanza</li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-ambientales/',id]">Temas ambientales</a></li>          
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales/',id]">Fuerza laboral</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales-con/',id]">Temas sociales parte 2</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-trazabilidad/',id]">Trazabilidad</a></li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Gobernanza</span>
+
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*GOBERNANZA*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia3.mp4?alt=media&token=429cf6c6-93bb-4461-afda-7c04e444e563">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+            
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Negocios éticos:</li>
+              </ul> <br><br>
+
+
+              
+              <h4>Existe un compromiso o política para:</h4>
+
+              
+              <!-- go1 - go7 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go1-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3"> <!-- Nombre Legal  -->
+                        <input readonly  formControlName="go1" class="field__input">
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go2-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go2" class="field__input">
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go3-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly   formControlName="go3" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go4-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go4" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go5-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go5" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go6-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go6" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go7-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go7" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>El compromiso incluye a los proveedores externos en:</h4>
+
+              <!-- go8 - go14 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go8-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go8" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go9-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go9" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go10-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go10" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go11-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go11" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go12-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go12" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go13-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go13" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go14-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go14" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Existe un plan de acción documentado que incluya acciones específicas para:</h4>
+
+              <!-- go15 - go21 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go15-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go15" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go16-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go16" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go17-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go17" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go18-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go18" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go19-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go19" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go20-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go20" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go21-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go21" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realizan capacitaciones y entrenamientos documentados en el tema a la fuerza laboral y grupos de interés</h4>
+
+              <!-- go22 - go28 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go22-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go22" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go23-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go23" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go24-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go24" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go25-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go25" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go26-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go26" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go27-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go27" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go28-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go28" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se cuenta con equipo interno capacitado en:</h4>
+
+              <!-- go29 - go35 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go29-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go29" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go30-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go30" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go31-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go31" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go32-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go32" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go33-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go33" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go34-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go34" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go35-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go35" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</h4>
+
+              <!-- go36 - go42 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go36-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go36" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go37-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go37" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go38-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go38" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go39-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go39" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go40-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go40" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go41-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go41" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go42-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go42" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realiza seguimiento a la implementación del plan de acción para:</h4>
+
+              <!-- go43 - go49 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go43-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go43" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go44-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go44" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go45-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go45" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go46-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go46" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go47-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go47" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go48-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go48" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go49-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go49" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Los resultados del plan de acción son divulgados y consultados en:</h4>
+
+              <!-- go50 - go56 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go50-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go50" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go51-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go51" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go52-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go52" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go53-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go53" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go54-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go54" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go55-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go55" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go56-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go56" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se toma acciones preventivas y correctivas sobre apoyo al proveedor basadas en los resultados de la implementación del plan de acción</h4>
+
+              <!-- go57 - go63 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go57-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go57" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go58-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go58" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go59-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go59" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go60-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go60" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go61-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go61" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go62-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go62" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go63-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go63" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El plan de acción de cumplimiento de leyes es actualizado (mínimo una vez al año) en:</h4>
+
+              <!-- go64 - go70 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go64-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go64" class="field__input">
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go65-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go65" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go66-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go66" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go67-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go67" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go68-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go68" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go69-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go69" class="field__input">
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go70-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly  formControlName="go70" class="field__input">
+                        
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+              <br>
+
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Esquemas de Certificación:</li>
+              </ul>
+
+              
+
+              <div class="form-group">
+
+                <!-- go71 -->
+                
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      <th scope="col">Opciones</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                    <tr>
+                      <!-- Pregunta go75-->
+                      <th scope="row">¿Es su empresa miembro de la RSPO?</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="field field_v3">
+                          <input readonly  formControlName="go75" class="field__input">
+                          
+                        </div>
+                      </td>
+  
+  
+                  </tbody>
+                </table>
+                <br><br>
+
+
+                <!-- go72 - go87 -->
+
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      
+                      <th scope="col"></th>
+                      <th scope="col">Auditado</th>
+                      <th scope="col"></th>
+                      
+                      <th scope="col">Certificado</th>
+                      <th scope="col"></th>
+                      
+                      <th scope="col">Alcance de la certificación</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                    <tr>
+                      <!-- Pregunta go76-->
+                      <th scope="col"></th>
+                      <th scope="row">RSPO</th>
+                      <!-- Auditado -->
+                      <td>
+                        <div class="field field_v3">
+                          <input readonly  formControlName="go76" class="field__input">
+                          
+                        </div>
+                      </td>
+
+                      <!-- Vacio -->
+                      <td>
+                      </td>
+
+                      <!-- Certificado -->
+                      
+                      <!-- Pregunta go77-->
+                      <td>
+                        <div class="field field_v3">
+                          <input readonly  formControlName="go77" class="field__input">
+                          
+                        </div>
+                      </td>
+
+                      <!-- Vacio -->
+                      <td>
+                      </td>
+
+                      <!-- Alcance de la certificación -->
+                      
+                      <!-- Pregunta go78-->
+                      <td>  
+                          <div class="field_v3"> <!-- Materia Prima  --> 
+                            <div class="field__input">
+                              <input formControlName="go78" class="select-css">
+                            </div>
+                          </div>
+                      </td>
+
+
+
+                      <tr>
+                        <!-- Pregunta go79-->
+                        <th scope="col"></th>
+                        <th scope="row">RA</th> 
+                        <!-- Auditado -->
+                        <td>
+                          <div class="field field_v3">
+                            <input readonly  formControlName="go79" class="field__input">
+                            
+                          </div>
+                        </td>
+  
+                        <!-- Vacio -->
+                        <td>
+                        </td>
+  
+                        <!-- Certificado -->
+                        <!-- Pregunta go80-->
+                        <td>
+                          <div class="field field_v3">
+                            <input readonly  formControlName="go80" class="field__input">
+                            
+                          </div>
+                        </td>
+  
+                        <!-- Vacio -->
+                        <td>
+                        </td>
+  
+                        <!-- Alcance de la certificación -->
+                        <!-- Pregunta go81-->
+                        <td>  
+                            <div class="field_v3"> <!-- Materia Prima  --> 
+                              <div class="field__input">
+                                <input formControlName="go81" class="select-css">
+                              </div>
+                            </div>
+                        </td>
+
+
+                        <tr>
+                          <!-- Pregunta go82-->
+                          <th scope="col"></th>
+                          <th scope="row">ISCC</th>
+                          <!-- Auditado -->
+                          <td>
+                            <div class="field field_v3">
+                              <input readonly  formControlName="go82" class="field__input">
+                              
+                            </div>
+                          </td>
+    
+                          <!-- Vacio -->
+                          <td>
+                          </td>
+    
+                          <!-- Certificado -->
+                          <!-- Pregunta go83-->
+                          <td>
+                            <div class="field field_v3">
+                              <input readonly  formControlName="go83" class="field__input">
+                              
+                            </div>
+                          </td>
+    
+                          <!-- Vacio -->
+                          <td>
+                          </td>
+    
+                          <!-- Alcance de la certificación -->
+                          
+                          <!-- Pregunta go84-->
+                          <td>  
+                              <div class="field_v3"> <!-- Materia Prima  --> 
+                                <div class="field__input">
+                                  <input formControlName="go84" class="select-css">
+                                </div>
+                              </div>
+                          </td>
+
+
+
+                          <tr>
+                            <!-- Pregunta go85-->
+                            <th scope="col"></th>
+                            <th scope="row">POIG</th>
+                            <!-- Auditado -->
+                            <td>
+                              <div class="field field_v3">
+                                <input readonly  formControlName="go85" class="field__input">
+                                
+                              </div>
+                            </td>
+      
+                            <!-- Vacio -->
+                            <td>
+                            </td>
+      
+                            <!-- Certificado -->
+                            <!-- Pregunta go86-->
+                            <td>
+                              <div class="field field_v3">
+                                <input readonly  formControlName="go86" class="field__input">
+                                
+                              </div>
+                            </td>
+      
+                            <!-- Vacio -->
+                            <td>
+                            </td>
+      
+                            <!-- Alcance de la certificación -->
+                            <!-- Pregunta go87-->
+                            <td>  
+                                <div class="field_v3"> <!-- Materia Prima  --> 
+                                  <div class="field__input">
+                                    <input formControlName="go87" class="select-css">
+                                  </div>
+                                </div>
+                            </td>
+  
+  
+                  </tbody>
+                </table>
+
+              </div>
+
+              <br><br>
+              <h4>Por favor complete la siguiente información respecto a los estándares. Si no se encuentra certificada coloque <b>"No Aplica"</b> </h4>
+              <br>
+
+              <!-- go88 - go95 -->
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go88  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado RSPO</label>
+                      <input readonly  formControlName="go88" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado RSPO</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go88 != 'No aplica'" class="field field_v3"> <!-- go89  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion RSPO</label>
+                      <input readonly  type="number" formControlName="go89" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion RSPO</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go90  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado RA</label>
+                      <input readonly  formControlName="go90" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado RA</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go90 != 'No aplica'" class="field field_v3"> <!-- go91  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion RA</label>
+                      <input readonly  type="number" formControlName="go91" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion RA</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go92  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado ISCC</label>
+                      <input readonly  formControlName="go92" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado ISCC</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go92 != 'No aplica'" class="field field_v3"> <!-- go93  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion ISCC</label>
+                      <input readonly  type="number" formControlName="go93" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion ISCC</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go94  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado POIG</label>
+                      <input readonly  formControlName="go94" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado POIG</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go94 != 'No aplica'" class="field field_v3"> <!-- go95  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion POIG</label>
+                      <input readonly  type="number" formControlName="go95" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion POIG</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+
+                </div>
+              </div>
+
+
+              <br><br>
+              <h4>Si cuenta con otro tipo de certificación no incluida en las preguntas anteriores, por favor complete el siguiente cuadro. de lo contratrario coloque <b>"No Aplica"</b> </h4>
+              <br>
+
+              <!-- go96 - go99 -->
+
+              <div class="form-group">
+                <div class="row">
+
+                  <div class="class col-12 mb-1">
+
+                    <div class="field field_v3"> <!-- go96  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Nombre de la certificación</label>
+                      <input readonly  formControlName="go96" class="field__input" placeholder="Escriba el nombre de la certificación con la que cuenta">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Nombre de la certificación</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div *ngIf="createRegister.value.go96 != 'No aplica'" class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go97  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado</label>
+                      <input readonly  formControlName="go97" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div *ngIf="createRegister.value.go96 != 'No aplica'" class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go98  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion</label>
+                      <input readonly  type="number" formControlName="go98" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion</span>
+                      </span>
+                    </div>
+                    
+                  </div> 
+                  
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item h3"></li>
+                  </ul> <br><br>
+
+                  <div class="class col-12 mb-5">
+
+                  <!-- go99 -->
+                
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <!-- Encabezados -->
+                        <th scope="col">Opciones</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+    
+    
+                      <tr>
+                        <!-- Pregunta go99-->
+                        <th scope="row">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                        <!-- Opciones -->
+                        <td>
+                          <div class="field_v3"> <!-- Materia Prima  --> 
+                            <div class="field__input">
+                              <input formControlName="go99" class="select-css">
+                            </div>
+                          </div>
+                        </td>
+    
+    
+                    </tbody>
+                  </table>
+
+                  </div>
+
+
+                  
+                  <br><br>
+
+                  
+
+
+                </div>
+              </div>
+                
+                
+
+
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted" *ngIf="id">
+              <div class="class row">
+                <div class="class col" >                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editar()" class="btn btn-success btn-lg btn-block">CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>

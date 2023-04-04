@@ -1,0 +1,113 @@
+<div *ngIf="userLogged|async as user" class="container mt-4">
+    <div class="card">
+        <div class="card-body shadow-lg">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <span class="h3">Listado de respuestas de trazabilidad</span>
+              </div>
+              <div class="col-3">
+                <button (click)="exportexcelh1()" class="btn btn-success btn-lg float-right">Descargar H1-2022</button>
+              </div>
+              <div class="col-3">
+                <button (click)="exportexcel()" class="btn btn-success btn-lg float-right">Descargar H2-2022</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+            <table hidden class="table table-striped mt-4" id="excel-table-traza">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">UML</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">¿Compró RFF en otro país durante el período de reporte?</th>
+                    <th scope="col">¿Tiene un sistema para garantizar la trazabilidad?</th>
+                    <th scope="col">¿Compró a otras plantas extractoras durante el periodo de reporte?</th>
+                    <th scope="col">Porcentaje (%) de trazabilidad a plantación (TTP) logrado hasta la fecha. No utilice separadores como comas (,) o puntos (.).</th>
+                    <th scope="col">Producción certificada (RSPO) en RFF en toneladas métricas (Tm) durante el periodo de reporte.</th>
+                    <th scope="col">Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte.</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PROVEEDORES EXTERNOS GRANDES (mayores de 50 hectáreas) durante el periodo de reporte.</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PROVEEDORES EXTERNOS PEQUEÑOS (menores de 50 hectáreas) durante el periodo de reporte</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de INTERMEDIARIOS (centros independientes de recolección y distribuidores) durante el periodo de reporte.</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTAS EXTRACTORAS (Incluyendo volúmenes que se procesan por medio de maquilas) durante el periodo de reporte.</th>
+                    <th scope="col">¿Cuenta su empresa con polígonos de las plantaciones hacen parte de su base de suministro?</th>
+                    <th scope="col">trazabilidad</th>
+                    <th scope="col">poligonos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacion of informacionCorreo">
+                    <td>{{informacion.codEmpresa}}</td>
+                    <td>{{informacion.correoElectronico}}</td>
+                    <td>{{informacion.tz1}}</td>
+                    <td>{{informacion.tz2}}</td>
+                    <td>{{informacion.tz4}}</td>
+                    <td>{{informacion.tz3}}</td>
+                    <td>{{informacion.tz5}}</td>
+                    <td>{{informacion.tz6}}</td>
+                    <td>{{informacion.tz7}}</td>
+                    <td>{{informacion.tz8}}</td>
+                    <td>{{informacion.tz9}}</td>
+                    <td>{{informacion.tz10}}</td>
+                    <td>{{informacion.tz11}}</td>
+                    <td>{{informacion.tz111}}</td>                    
+                    <td>{{informacion.trazabilidad}}</td>
+                    <td>{{informacion.evidenciata111}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <table hidden class="table table-striped mt-4" id="excel-table-traza-h1">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">UML</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">¿Compró RFF en otro país durante el período de reporte?</th>
+                    <th scope="col">¿Tiene un sistema para garantizar la trazabilidad?</th>
+                    <th scope="col">¿Compró a otras plantas extractoras durante el periodo de reporte?</th>
+                    <th scope="col">Porcentaje (%) de trazabilidad a plantación (TTP) logrado hasta la fecha. No utilice separadores como comas (,) o puntos (.).</th>
+                    <th scope="col">Producción certificada (RSPO) en RFF en toneladas métricas (Tm) durante el periodo de reporte.</th>
+                    <th scope="col">Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte.</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PROVEEDORES EXTERNOS GRANDES (mayores de 50 hectáreas) durante el periodo de reporte.</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PROVEEDORES EXTERNOS PEQUEÑOS (menores de 50 hectáreas) durante el periodo de reporte</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de INTERMEDIARIOS (centros independientes de recolección y distribuidores) durante el periodo de reporte.</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTAS EXTRACTORAS (Incluyendo volúmenes que se procesan por medio de maquilas) durante el periodo de reporte.</th>
+                    <th scope="col">¿Cuenta su empresa con polígonos de las plantaciones hacen parte de su base de suministro?</th>
+                    <th scope="col">trazabilidad</th>
+                    <th scope="col">poligonos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacion of informacionCorreoh1">
+                    <td>{{informacion.codEmpresa}}</td>
+                    <td>{{informacion.correoElectronico}}</td>
+                    <td>{{informacion.tz1}}</td>
+                    <td>{{informacion.tz2}}</td>
+                    <td>{{informacion.tz4}}</td>
+                    <td>{{informacion.tz3}}</td>
+                    <td>{{informacion.tz5}}</td>
+                    <td>{{informacion.tz6}}</td>
+                    <td>{{informacion.tz7}}</td>
+                    <td>{{informacion.tz8}}</td>
+                    <td>{{informacion.tz9}}</td>
+                    <td>{{informacion.tz10}}</td>
+                    <td>{{informacion.tz11}}</td>
+                    <td>{{informacion.tz111}}</td>                    
+                    <td>{{informacion.trazabilidad}}</td>
+                    <td>{{informacion.evidenciata111}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+        </div>
+    </div>
+</div>

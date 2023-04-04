@@ -1,0 +1,14 @@
+table th {
+    background-color: rgb(0, 166, 171);
+    border: none;
+  }
+
+.btn-info2 {
+    background-color: rgb(170, 167, 56);
+    color: #fff;
+  }
+
+.btn-agregar {
+    background-color: rgb(0, 166, 171);
+    color: #fff;
+}

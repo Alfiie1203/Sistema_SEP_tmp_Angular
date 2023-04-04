@@ -1,0 +1,295 @@
+<app-menu></app-menu>
+
+<form [formGroup]="createRegister" (ngSubmit)="editar()">
+    <div *ngIf="userLogged|async as user" class="container mt-4" class="container mt-4">
+
+
+      <nav *ngIf="id" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page" style="color:rgb(36, 65, 197)">Información de la compañía</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Gobernanza</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas ambientales</li>          
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Fuerza laboral</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas sociales parte 2</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Trazabilidad</li>
+        </ol>
+      </nav>
+
+
+
+
+      <div class="card1">
+        <div class="card-body shadow-lg">
+          
+          <span class="h1">Información de la compañía</span>
+
+        
+          <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*INFORMACION+DE+MI+COMPAÑIA*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+            <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+          </a>
+
+          <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia2.mp4?alt=media&token=00ab5f6d-e1e9-4dfd-97d6-5f016917b65f">            
+            <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+          </a>
+              
+        </div>
+        
+      </div>
+  
+  
+      <div class="card">
+          <div class="card-body shadow-lg">
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item h3">Información básica de la empresa:</li>
+                  <li class="list-group-item"></li>
+                </ul>
+  
+  
+  
+  
+                <div class="form-group">
+                  <div class="row">
+  
+  
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Materia Prima  -->
+                        <label for="materiaPrima" class="ha-screen-reader field__input">Materia Prima</label> 
+                        <div class="field__input">
+                          <select formControlName="materiaPrima" class="select-css">
+                            <option disable selected>Seleccione una opción</option>
+                            <option>Aceite de palma</option>
+                          </select>
+                        </div>
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Materia Prima</span>
+                        </span>
+                      </div>
+  
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Grupo Empresarial  -->
+                        <label for="grupoEmpresarial" class="ha-screen-reader">Grupo Empresarial</label>
+                        <input formControlName="grupoEmpresarial" class="field__input" placeholder="Mencione a que grupo empresarial pertenece">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Grupo Empresarial</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Nombre Legal  -->
+                        <label for="nombreLegal" class="ha-screen-reader">Nombre Legal</label>
+                        <input formControlName="nombreLegal" class="field__input" placeholder="Mencione el nombre legal de la empresa">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Nombre Legal</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Sitio Web  -->
+                        <label for="sitioWeb" class="ha-screen-reader">Sitio Web</label>
+                        <input formControlName="sitioWeb" class="field__input" placeholder="Sitio Web de la empresa">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Sitio Web</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Capacidad de Producción (T/Hora)  -->
+                        <label for="capacidadProducion" class="ha-screen-reader">Capacidad de Producción (T/Hora)</label>
+                        <input type="number" formControlName="capacidadProducion" class="field__input" placeholder="Cantidad de toneladas por hora">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Capacidad de Producción (T/Hora)</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                  </div>
+                </div><br>
+  
+  
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item h3">Información de contacto:</li>
+                  <li class="list-group-item"></li>
+                </ul>
+  
+  
+                <div class="form-group">
+                  <div class="row">
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Nombres  -->
+                        <label for="nombres" class="ha-screen-reader">Nombres</label>
+                        <input formControlName="nombres" class="field__input" placeholder="Nombres de la persona de contacto">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Nombres</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Apellidos  -->
+                        <label for="apellidos" class="ha-screen-reader">Apellidos</label>
+                        <input formControlName="apellidos" class="field__input" placeholder="Apellidos de la persona de contacto">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Apellidos</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Pais de recidencia  -->
+                        <label for="paisRecidencia" class="ha-screen-reader">País de residencia</label>
+                        <input formControlName="paisRecidencia" class="field__input" placeholder="Pais de la persona de contacto">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">País de residencia</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Telefono  -->
+                        <label for="telefono" class="ha-screen-reader">Teléfono</label>
+                        <input type="number" formControlName="telefono" class="field__input" placeholder="Telefono de la persona de contacto">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Telefono</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Correo Elecronico  -->
+                        <label for="correoElectronico" class="ha-screen-reader">Correo Electrónico</label>
+                        <input readonly formControlName="correoElectronico" class="field__input" placeholder="Correo Elecronico de la persona de contacto">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Correo Electrónico</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Cargo  -->
+                        <label for="cargo" class="ha-screen-reader">Cargo</label>
+                        <input formControlName="cargo" class="field__input" placeholder="Cargo que ocupa en la compañía">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Cargo</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                  </div>
+                </div><br>
+  
+  
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item h3">Información de ubicación:</li>
+                  <li class="list-group-item"></li>
+                </ul>
+  
+  
+                <div class="form-group">
+                  <div class="row">
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Pais  -->
+                        <label for="pais" class="ha-screen-reader">País</label>
+                        <input formControlName="pais" class="field__input" placeholder="Pais de la empresa">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">País</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Departamento/Estado/Provincia  -->
+                        <label for="departamento" class="ha-screen-reader">Departamento/Estado/Provincia</label>
+                        <input formControlName="departamento" class="field__input" placeholder="Departamento/Estado/Provincia de la empresa">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Departamento/Estado/Provincia</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Municipio  -->
+                        <label for="municipio" class="ha-screen-reader">Municipio</label>
+                        <input formControlName="municipio" class="field__input" placeholder="Municipio de la empresa">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Municipio</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                    <div class="class col-6 mb-1">
+  
+                      <div class="field field_v3"> <!-- Coordenadas  -->
+                        <label for="coordenadas" class="ha-screen-reader">Coordenadas</label>
+                        <input formControlName="coordenadas" class="field__input" placeholder="Coordenadas de la empresa">
+                        <span class="field__label-wrap" aria-hidden="true">
+                          <span class="field__label h7">Coordenadas</span>
+                        </span>
+                      </div>
+                      
+                    </div>
+  
+                  </div>
+                </div>
+                <br><br>
+                
+          
+                <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                  TODOS LOS CAMPOS SON OBLIGATORIOS !
+                </div>
+                
+  
+  
+              </div>
+              <div class="card-footer text-muted">
+                <div class="class row">
+                  <div class="class col">
+                  </div>
+                  <div class="class col" *ngIf="id">
+                    <button class="btn btn-success btn-lg btn-block">GUARDAR Y CONTINUAR
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+      </div>
+      <br><br>
+    </div>
+</form>

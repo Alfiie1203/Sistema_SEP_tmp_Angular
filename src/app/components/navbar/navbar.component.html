@@ -1,0 +1,16 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light shadow" style="background-color: rgb(0, 166, 171);">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/logo2.png" width="90" height="90" alt="">
+      <img src="./assets/PF_logo_white.png" width="300" height="60" alt="">
+    </a>
+    <div *ngIf="userLogged|async as user">
+      <img *ngIf="user.photoURL" src="{{user.photoURL}}" 
+            width="30" height="30" class="d-inline-block align-top" alt="">
+      
+      <button type="button" class="btn btn-lg btn-dark" (click)="salir()">Salir</button>
+    </div>
+    
+</nav>
+
+<br>

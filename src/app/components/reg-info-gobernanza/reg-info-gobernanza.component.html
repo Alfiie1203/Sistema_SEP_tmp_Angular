@@ -1,0 +1,2031 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+    <nav *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Información de la compañía</li>
+        <li class="breadcrumb-item active" aria-current="page" style="color:rgb(36, 65, 197)">Gobernanza</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas ambientales</li>          
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Fuerza laboral</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas sociales parte 2</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Trazabilidad</li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Gobernanza</span>
+
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*GOBERNANZA*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia3.mp4?alt=media&token=429cf6c6-93bb-4461-afda-7c04e444e563">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+            
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Negocios éticos:</li>
+              </ul> <br><br>
+
+
+              
+              <h4>Existe un compromiso o política para:</h4>
+
+              
+              <!-- go1 - go7 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go1-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go1" class="form-check-input" type="radio" id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go1" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go2-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go2" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go2" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go3-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go3" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go3" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go4-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go4" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go4" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go5-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go5" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go5" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go6-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go6" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go6" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go7-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go7" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go7" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>El compromiso incluye a los proveedores externos en:</h4>
+
+              <!-- go8 - go14 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go8-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go8" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go8" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go9-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go9" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go9" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go10-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go10" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go10" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go11-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go11" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go11" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go12-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go12" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go12" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go13-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go13" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go13" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go14-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go14" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go14" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Existe un plan de acción documentado que incluya acciones específicas para:</h4>
+
+              <!-- go15 - go21 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go15-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go15" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go15" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go16-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go16" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go16" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go17-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go17" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go17" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go18-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go18" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go18" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go19-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go19" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go19" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go20-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go20" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go20" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go21-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go21" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go21" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realizan capacitaciones y entrenamientos documentados en el tema a la fuerza laboral y grupos de interés</h4>
+
+              <!-- go22 - go28 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go22-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go22" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go22" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go23-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go23" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go23" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go24-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go24" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go24" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go25-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go25" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go25" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go26-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go26" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go26" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go27-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go27" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go27" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go28-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go28" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go28" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se cuenta con equipo interno capacitado en:</h4>
+
+              <!-- go29 - go35 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go29-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go29" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go29" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go30-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go30" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go30" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go31-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go31" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go31" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go32-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go32" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go32" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go33-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go33" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go33" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go34-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go34" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go34" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go35-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go35" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go35" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés</h4>
+
+              <!-- go36 - go42 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go36-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go36" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go36" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go37-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go37" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go37" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go38-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go38" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go38" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go39-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go39" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go39" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go40-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go40" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go40" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go41-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go41" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go41" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go42-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go42" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go42" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realiza seguimiento a la implementación del plan de acción para:</h4>
+
+              <!-- go43 - go49 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go43-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go43" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go43" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go44-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go44" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go44" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go45-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go45" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go45" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go46-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go46" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go46" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go47-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go47" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go47" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go48-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go48" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go48" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go49-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go49" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go49" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Los resultados del plan de acción son divulgados y consultados en:</h4>
+
+              <!-- go50 - go56 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go50-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go50" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go50" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go51-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go51" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go51" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go52-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go52" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go52" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go53-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go53" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go53" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go54-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go54" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go54" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go55-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go55" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go55" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go56-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go56" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go56" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se toma acciones preventivas y correctivas sobre apoyo al proveedor basadas en los resultados de la implementación del plan de acción</h4>
+
+              <!-- go57 - go63 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go57-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go57" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go57" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go58-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go58" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go58" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go59-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go59" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go59" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go60-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go60" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go60" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go61-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go61" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go61" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go62-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go62" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go62" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go63-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go63" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go63" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El plan de acción de cumplimiento de leyes es actualizado (mínimo una vez al año) en:</h4>
+
+              <!-- go64 - go70 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta go64-->
+                    <th scope="row">El cumplimiento de leyes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go64" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go64" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta go65-->
+                    <th scope="row">Anticorrupción</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go65" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go65" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go66-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go66" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go66" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go67-->
+                    <th scope="row">Antisoborno</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go67" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go67" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go68-->
+                    <th scope="row">Anti-lavado de dinero</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go68" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go68" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta go69-->
+                    <th scope="row">Trazabilidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go69" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go69" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta go70-->
+                    <th scope="row">Conflictos de interés</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go70" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="go70" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                </tbody>
+              </table>
+              <br>
+
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Esquemas de Certificación:</li>
+              </ul>
+
+              
+
+              <div class="form-group">
+
+                <!-- go71 -->
+                
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      <th scope="col">Opciones</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                    <tr>
+                      <!-- Pregunta go75-->
+                      <th scope="row">¿Es su empresa miembro de la RSPO?</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="go75" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                          <label class="form-check-label" for="inlineRadio1">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="go75" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </td>
+  
+  
+                  </tbody>
+                </table>
+                <br><br>
+
+
+                <!-- go72 - go87 -->
+
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      
+                      <th scope="col"></th>
+                      <th scope="col">Auditado</th>
+                      <th scope="col"></th>
+                      
+                      <th scope="col">Certificado</th>
+                      <th scope="col"></th>
+                      
+                      <th scope="col">Alcance de la certificación</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                    <tr>
+                      <!-- Pregunta go76-->
+                      <th scope="col"></th>
+                      <th scope="row">RSPO</th>
+                      <!-- Auditado -->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="go76" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                          <label class="form-check-label" for="inlineRadio1">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="go76" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </td>
+
+                      <!-- Vacio -->
+                      <td>
+                      </td>
+
+                      <!-- Certificado -->
+                      
+                      <!-- Pregunta go77-->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="go77" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                          <label class="form-check-label" for="inlineRadio1">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="go77" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </td>
+
+                      <!-- Vacio -->
+                      <td>
+                      </td>
+
+                      <!-- Alcance de la certificación -->
+                      
+                      <!-- Pregunta go78-->
+                      <td>  
+                          <div class="field_v3"> <!-- Materia Prima  --> 
+                            <div class="field__input">
+                              <select formControlName="go78" class="select-css">
+                                <option value="" disable selected>Seleccione una opción</option>
+                                <option>Solo extractora y cultivos propios</option>
+                                <option>Incluye proveedores</option>
+                                <option>No Aplica</option>
+                              </select>
+                            </div>
+                          </div>
+                      </td>
+
+
+
+                      <tr>
+                        <!-- Pregunta go79-->
+                        <th scope="col"></th>
+                        <th scope="row">RA</th> 
+                        <!-- Auditado -->
+                        <td>
+                          <div class="form-check form-check-inline">
+                            <input formControlName="go79" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                            <label class="form-check-label" for="inlineRadio1">Si</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input formControlName="go79" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                          </div>
+                        </td>
+  
+                        <!-- Vacio -->
+                        <td>
+                        </td>
+  
+                        <!-- Certificado -->
+                        <!-- Pregunta go80-->
+                        <td>
+                          <div class="form-check form-check-inline">
+                            <input formControlName="go80" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                            <label class="form-check-label" for="inlineRadio1">Si</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input formControlName="go80" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                          </div>
+                        </td>
+  
+                        <!-- Vacio -->
+                        <td>
+                        </td>
+  
+                        <!-- Alcance de la certificación -->
+                        <!-- Pregunta go81-->
+                        <td>  
+                            <div class="field_v3"> <!-- Materia Prima  --> 
+                              <div class="field__input">
+                                <select formControlName="go81" class="select-css">
+                                  <option value="" disable selected>Seleccione una opción</option>
+                                  <option>Solo extractora y cultivos propios</option>
+                                  <option>Incluye proveedores</option>
+                                  <option>No Aplica</option>
+                                </select>
+                              </div>
+                            </div>
+                        </td>
+
+
+                        <tr>
+                          <!-- Pregunta go82-->
+                          <th scope="col"></th>
+                          <th scope="row">ISCC</th>
+                          <!-- Auditado -->
+                          <td>
+                            <div class="form-check form-check-inline">
+                              <input formControlName="go82" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                              <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input formControlName="go82" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                              <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                          </td>
+    
+                          <!-- Vacio -->
+                          <td>
+                          </td>
+    
+                          <!-- Certificado -->
+                          <!-- Pregunta go83-->
+                          <td>
+                            <div class="form-check form-check-inline">
+                              <input formControlName="go83" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                              <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input formControlName="go83" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                              <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                          </td>
+    
+                          <!-- Vacio -->
+                          <td>
+                          </td>
+    
+                          <!-- Alcance de la certificación -->
+                          
+                          <!-- Pregunta go84-->
+                          <td>  
+                              <div class="field_v3"> <!-- Materia Prima  --> 
+                                <div class="field__input">
+                                  <select formControlName="go84" class="select-css">
+                                    <option value="" disable selected>Seleccione una opción</option>
+                                    <option>Solo extractora y cultivos propios</option>
+                                    <option>Incluye proveedores</option>
+                                    <option>No Aplica</option>
+                                  </select>
+                                </div>
+                              </div>
+                          </td>
+
+
+
+                          <tr>
+                            <!-- Pregunta go85-->
+                            <th scope="col"></th>
+                            <th scope="row">POIG</th>
+                            <!-- Auditado -->
+                            <td>
+                              <div class="form-check form-check-inline">
+                                <input formControlName="go85" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input formControlName="go85" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                              </div>
+                            </td>
+      
+                            <!-- Vacio -->
+                            <td>
+                            </td>
+      
+                            <!-- Certificado -->
+                            <!-- Pregunta go86-->
+                            <td>
+                              <div class="form-check form-check-inline">
+                                <input formControlName="go86" class="form-check-input" type="radio"  id="inlineRadio1" value="Si">
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input formControlName="go86" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                              </div>
+                            </td>
+      
+                            <!-- Vacio -->
+                            <td>
+                            </td>
+      
+                            <!-- Alcance de la certificación -->
+                            <!-- Pregunta go87-->
+                            <td>  
+                                <div class="field_v3"> <!-- Materia Prima  --> 
+                                  <div class="field__input">
+                                    <select formControlName="go87" class="select-css">
+                                      <option value="" disable selected>Seleccione una opción</option>
+                                      <option>Solo extractora y cultivos propios</option>
+                                      <option>Incluye proveedores</option>
+                                      <option>No Aplica</option>
+                                    </select>
+                                  </div>
+                                </div>
+                            </td>
+  
+  
+                  </tbody>
+                </table>
+
+              </div>
+
+              <br><br>
+              <h4>Por favor complete la siguiente información respecto a los estándares. Si no se encuentra certificada coloque <b>"No Aplica"</b> </h4>
+              <br>
+
+              <!-- go88 - go95 -->
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go88  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado RSPO</label>
+                      <input formControlName="go88" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado RSPO</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go88 != 'No aplica'" class="field field_v3"> <!-- go89  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion RSPO</label>
+                      <input type="number" formControlName="go89" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion RSPO</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go90  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado RA</label>
+                      <input formControlName="go90" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado RA</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go90 != 'No aplica'" class="field field_v3"> <!-- go91  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion RA</label>
+                      <input type="number" formControlName="go91" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion RA</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go92  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado ISCC</label>
+                      <input formControlName="go92" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado ISCC</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go92 != 'No aplica'" class="field field_v3"> <!-- go93  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion ISCC</label>
+                      <input type="number" formControlName="go93" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion ISCC</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go94  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado POIG</label>
+                      <input formControlName="go94" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado POIG</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div class="class col-6 mb-1">
+
+                    <div *ngIf="createRegister.value.go94 != 'No aplica'" class="field field_v3"> <!-- go95  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion POIG</label>
+                      <input type="number" formControlName="go95" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion POIG</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+
+                </div>
+              </div>
+
+
+              <br><br>
+              <h4>Si cuenta con otro tipo de certificación no incluida en las preguntas anteriores, por favor complete el siguiente cuadro. de lo contratrario coloque <b>"No Aplica"</b> </h4>
+              <br>
+
+              <!-- go96 - go99 -->
+
+              <div class="form-group">
+                <div class="row">
+
+                  <div class="class col-12 mb-1">
+
+                    <div class="field field_v3"> <!-- go96  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Nombre de la certificación</label>
+                      <input formControlName="go96" class="field__input" placeholder="Escriba el nombre de la certificación con la que cuenta">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Nombre de la certificación</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div *ngIf="createRegister.value.go96 != 'No aplica'" class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go97  -->
+                      <label for="sitioWeb" class="ha-screen-reader">Numero de certificado</label>
+                      <input formControlName="go97" class="field__input" placeholder="Ej: 0-0000-00-000-00">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Numero de certificado</span>
+                      </span>
+                    </div>
+                    
+                  </div>
+
+                  <div *ngIf="createRegister.value.go96 != 'No aplica'" class="class col-6 mb-1">
+
+                    <div class="field field_v3"> <!-- go98  -->
+                      <label for="capacidadProducion" class="ha-screen-reader">Año de certificacion</label>
+                      <input type="number" formControlName="go98" class="field__input" placeholder="Año en el que se certifico">
+                      <span class="field__label-wrap" aria-hidden="true">
+                        <span class="field__label h7">Año de certificacion</span>
+                      </span>
+                    </div>
+                    
+                  </div> 
+                  
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item h3"></li>
+                  </ul> <br><br>
+
+                  <div class="class col-12 mb-5">
+
+                  <!-- go99 -->
+                
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <!-- Encabezados -->
+                        <th scope="col">Opciones</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+    
+    
+                      <tr>
+                        <!-- Pregunta go99-->
+                        <th scope="row">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                        <!-- Opciones -->
+                        <td>
+                          <div class="field_v3"> <!-- Materia Prima  --> 
+                            <div class="field__input">
+                              <select formControlName="go99" class="select-css">
+                                <option value="" disable selected>Seleccione una opción</option>
+                                <option>Identidad Preservada (IP)</option>
+                                <option>Segregación (SG)</option>
+                                <option>Balance de Masas (BM)</option>                            
+                                <option>No Aplica</option>
+                              </select>
+                            </div>
+                          </div>
+                        </td>
+    
+    
+                    </tbody>
+                  </table>
+
+                  </div>
+
+
+                  
+                  <br><br>
+
+                  
+
+
+                </div>
+              </div>
+                
+                
+
+
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted" *ngIf="id">
+              <div class="class row">
+                <div class="class col" >                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editar()" class="btn btn-success btn-lg btn-block">GUARDAR Y CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>

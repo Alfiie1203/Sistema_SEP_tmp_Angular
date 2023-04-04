@@ -1,0 +1,9 @@
+<app-wwfmenu></app-wwfmenu>
+
+<div>
+    <a [href]="image" *ngFor="let image of images"><button>Descargar</button></a>
+</div>
+
+<div>
+    <button (click)="getImages()">Masivo</button>
+</div>

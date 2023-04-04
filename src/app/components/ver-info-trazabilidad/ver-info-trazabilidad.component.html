@@ -1,0 +1,345 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+    <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+      <nav *ngIf="id" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="['/ver-info-compania/',id]">Información de la compañía</a></li>
+          <li class="breadcrumb-item"><a [routerLink]="['/ver-info-gobernanza/',id]">Gobernanza</a></li>      
+          <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-ambientales/',id]">Temas ambientales</a></li>
+          <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales/',id]">Fuerza laboral</a></li>
+          <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales-con/',id]">Temas sociales parte 2</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Trazabilidad</li>    
+        </ol>
+      </nav>
+      
+      <div class="card1">
+        <div class="card-body shadow-lg">
+  
+          <span class="h1">Trazabilidad</span>
+              
+          
+        </div>
+      </div>
+  
+  
+      <div class="card">
+          <div class="card-body shadow-lg">
+              <div class="card-body">
+  
+  
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      <th scope="col">Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                    <tr> <!-- tz1 -->
+                      <th scope="row">¿Compró RFF en otro país durante el período de reporte?
+                      </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="field field_v3">
+                          <input readonly formControlName="tz1" class="field__input" >
+                          
+                        </div>
+                        <div class="field field_v3">
+                          <input readonly formControlName="tz1" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                          
+                        </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz2 -->
+                      <th scope="row">¿Tiene un sistema para garantizar la trazabilidad?
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="field field_v3">
+                          <input readonly formControlName="tz2" class="field__input" >
+                          
+                        </div>
+                        <div class="field field_v3">
+                          <input readonly formControlName="tz2" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                          
+                        </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz4 -->
+                      <th scope="row">¿Compró a otras plantas extractoras durante el periodo de reporte?</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="field field_v3">
+                          <input readonly formControlName="tz4" class="field__input" >
+                          
+                        </div>
+                        <div class="field field_v3">
+                          <input readonly formControlName="tz4" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                          
+                        </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz3 -->
+                      <th scope="row">Porcentaje (%) de trazabilidad a plantación (TTP) logrado hasta la fecha. <br> No utilice separadores como comas (,) o puntos (.).</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz3  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz3" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz5 -->
+                      <th scope="row">Producción certificada (RSPO) en RFF en toneladas métricas (Tm) durante<br> el periodo de reporte.</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz5  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz5" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz6 -->
+                      <th scope="row">Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el<br> periodo de reporte
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz6  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz6" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz7 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de<br> PLANTACIONES PROPIAS durante el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz7  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz7" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz8 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>PROVEEDORES EXTERNOS GRANDES (mayores de 50 hectáreas) durante<br> el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz8  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz8" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz9 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>PROVEEDORES EXTERNOS PEQUEÑOS (menores de 50 hectáreas) durante<br> el periodo de reporte
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz9  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz9" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz10 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>INTERMEDIARIOS (centros independientes de recolección y distribuidores) <br>durante el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz10  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz10" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz11 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>PLANTAS EXTRACTORAS (Incluyendo volúmenes que se procesan por medio<br> de maquilas) durante el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz11  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input readonly type="number" formControlName="tz11" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+
+                    
+  
+  
+  
+  
+  
+                  </tbody>
+                </table>
+                <br><br>
+
+
+
+                <div class="row">
+                  <div class="col 1"></div>
+                  <div class="col 5" *ngFor="let info of info">
+                      <h4>Trazabilidad</h4>
+                      <div *ngIf="createRegister.value.trazabilidad != ''; else sinArchivo">
+                        <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.trazabilidad}}" target="_blank">Desarcargar Archivo</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo trazabilidad
+                        </div>
+                      </ng-template>
+                  </div>
+                  <div class="col 5" *ngFor="let info of info">
+                      <h4>Poligonos</h4>
+                      <div *ngIf="createRegister.value.evidenciatz111 != ''; else sinArchivo">
+                        <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciatz111}}" target="_blank">Desarcargar Archivo</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargaron poligonos
+                        </div>
+                      </ng-template>                    
+                  </div>
+                  <div class="col 1"></div>
+                </div>
+                
+
+                <br><br>
+                
+          
+                <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                  TODOS LOS CAMPOS SON OBLIGATORIOS !
+                </div>
+                
+  
+  
+              </div>
+              <div class="card-footer text-muted">
+                <div class="class row">
+                  <div class="class col" *ngIf="id">                  
+                    <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="class col">
+                    <button class="btn btn-success btn-lg btn-block " (click)="editar()">FINALIZAR REVISIÓN
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      </button>                  
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+      </div>
+      <br><br>
+    </div>
+  </form>

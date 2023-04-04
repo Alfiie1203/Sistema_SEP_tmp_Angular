@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div *ngIf="userLogged|async as user" class="container mt-4" class="container mt-4">
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <span class="h3">Listado de respuestas</span>
+            <button class="btn btn-dark btn-lg float-right">Agregar</button>
+            <table class="table table-striped mt-4">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Materia Prima</th>
+                    <th scope="col">Nombre Legal</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Correo</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let item of items | async">
+                  <tr>
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.IC_1}}</td>
+                    <td>{{item.IC_3}}</td> 
+                    <td>{{item.IC_6}}</td>
+                    <td>{{item.IC_7}}</td>
+                    <td>{{item.IC_10}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

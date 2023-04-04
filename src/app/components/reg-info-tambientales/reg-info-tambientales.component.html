@@ -1,0 +1,2876 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister">
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+    <nav target="_blank" *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Información de la compañía</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Gobernanza</li>      
+        <li class="breadcrumb-item active" aria-current="page" style="color:rgb(36, 65, 197)">Temas ambientales</li>    
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Fuerza laboral</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas sociales parte 2</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Trazabilidad</li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Temas ambientales</span>
+
+        <a style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*TEMAS+AMBIENTALES*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia4.mp4?alt=media&token=e1b07414-2d88-4ade-8b0a-300d1261d702">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+            
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Respeto a los bosques y la biodiversidad:</li>
+                  <a target="_blank" style="color: rgb(55, 14, 235);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/PDF%2Fndpe_irf_verification-protocol_mills_evidence%20(1).pdf?alt=media&token=7ed02a45-2ce9-4a4c-9d06-e4e8878d5439">            
+                    Para más detalles sobre las evidencias a reportar consulta el Protocolo de Verificación del IRF haga click aqui
+                  </a>
+              </ul> <br><br>
+
+
+              
+              <h4>Existe un compromiso o política sobre:</h4>
+
+              
+              <!-- ta1 - ta8 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta1-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input #prueba formControlName="ta1" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta1" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta2-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta2" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta2" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta1-->
+                    <!-- Opciones -->
+                    <td>
+                      <div *ngIf="createRegister.value.ta1 == 'Si' ">
+                        <div>
+                          <input hidden #evidenciata1 formControlName="evidenciata1" type="text" [value]="urlta1 | async">
+                        </div>
+    
+                        <div class="file-select" id="src-file" >
+                          <input class="form-control" (change)="ta1($event)" type="file">
+                        </div>
+                        
+                        <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota1()">
+                          <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                        </a>
+                        <div *ngIf="urlta1 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                          <p style="text-align:center">El archivo fue cargado con exito !</p>
+                        </div>
+                        <ng-template #imagenCargada>
+                          <div class="alert alert-danger" role="alert">
+                            <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                          </div>
+                        </ng-template>
+                      </div>
+                      <div *ngIf="createRegister.value.ta1 == 'No' ">
+                        <div>
+                          <input hidden #evidenciata1 formControlName="evidenciata1" type="text" [value]="noAplica">
+                        </div>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta2-->
+                    
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td>
+                      <div *ngIf="createRegister.value.ta2 == 'Si'">
+
+                        <div>
+                          <input hidden #evidenciata2 formControlName="evidenciata2" type="text" [value]="urlta2 | async">
+                        </div>
+    
+                        <div class="file-select" id="src-file" >
+                          <input class="form-control" (change)="ta2($event)" type="file">
+                        </div>
+                        <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota2()">            
+                          <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                        </a>
+                        <div *ngIf="urlta2 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                          <p style="text-align:center">El archivo fue cargado con exito !</p>
+                        </div>
+                        <ng-template #imagenCargada>
+                          <div class="alert alert-danger" role="alert">
+                            <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                          </div>
+                        </ng-template>
+    
+                      </div>
+                      <div *ngIf="createRegister.value.ta2 == 'No' ">
+                        <div>
+                          <input hidden #evidenciata2 formControlName="evidenciata2" type="text" [value]="noAplica">
+                        </div>
+                      </div>
+
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <!-- Pregunta ta3-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta3" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta3" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta4-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta4" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta4" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta5-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta5" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta5" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta6-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta6" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta6" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta7-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta7" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta7" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta8-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta8" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta8" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso incluye a los proveedores externos para:</h4>
+
+              <!-- ta9 - ta16 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta9-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta9" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta9" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta10-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta10" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta10" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta11-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta11" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta11" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta12-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta12" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta12" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta13-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta13" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta13" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta14-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta14" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta14" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta15-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta15" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta15" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta16-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta16" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta16" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Existe un plan de acción y monitoreo documentado para:</h4>
+
+              <!-- ta17 - ta24 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta17-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta17" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta17" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta18-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta18" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta18" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <!-- Pregunta ta17-->
+                    <!-- Opciones -->
+                    <td>
+                      <div *ngIf="createRegister.value.ta17 == 'Si'">
+                        <div>
+                          <input hidden #evidenciata17 formControlName="evidenciata17" type="text" [value]="urlta17 | async">
+                        </div>
+    
+                        <div class="file-select" id="src-file" >
+                          <input class="form-control" (change)="ta17($event)" type="file">
+                        </div>
+                        <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota17()">            
+                          <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                        </a>
+                        <div *ngIf="urlta17 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                          <p style="text-align:center">El archivo fue cargado con exito !</p>
+                        </div>
+                        <ng-template #imagenCargada>
+                          <div class="alert alert-danger" role="alert">
+                            <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                          </div>
+                        </ng-template>
+                      </div>
+                      <div *ngIf="createRegister.value.ta17 == 'No' ">
+                        <div>
+                          <input hidden #evidenciata17 formControlName="evidenciata17" type="text" [value]="noAplica">
+                        </div>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta18-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td>
+                      <div *ngIf="createRegister.value.ta18 == 'Si'">
+
+                        <div>
+                          <input hidden #evidenciata18 formControlName="evidenciata18" type="text" [value]="urlta18 | async">
+                        </div>
+    
+                        <div class="file-select" id="src-file" >
+                          <input class="form-control" (change)="ta18($event)" type="file">
+                        </div>
+                        <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota18()">            
+                          <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                        </a>
+                        <div *ngIf="urlta18 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                          <p style="text-align:center">El archivo fue cargado con exito !</p>
+                        </div>
+                        <ng-template #imagenCargada>
+                          <div class="alert alert-danger" role="alert">
+                            <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                          </div>
+                        </ng-template>
+    
+                      </div>
+                      <div *ngIf="createRegister.value.ta18 == 'No' ">
+                        <div>
+                          <input hidden #evidenciata18 formControlName="evidenciata18" type="text" [value]="noAplica">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta19-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta19" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta19" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta20-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta20" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta20" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta21-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta21" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta21" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta22-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta22" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta22" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta23-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta23" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta23" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta24-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta24" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta24" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realizan capacitaciones y entrenamientos documentados a la fuerza laboral y grupos de interés en:</h4>
+
+              <!-- ta25 - ta32 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta25-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta25" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta25" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta26-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta26" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta26" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta27-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta27" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta27" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta28-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta28" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta28" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta29-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta29" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta29" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta30-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta30" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta30" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta31-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta31" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta31" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta32-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta32" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta32" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se cuenta con equipo interno capacitado en:</h4>
+
+              <!-- ta33 - ta40 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta33-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta33" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta33" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta34-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta34" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta34" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta35-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta35" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta35" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta36-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta36" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta36" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta37-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta37" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta37" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta38-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta38" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta38" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta39-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta39" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta39" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta40-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta40" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta40" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso, plan de acción y monitoreo es divulgado y consultado con la fuerza laboral y grupos de interés</h4>
+
+              <!-- ta41 - ta48 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta41-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta41" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta41" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta42-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta42" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta42" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta43-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta43" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta43" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta44-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta44" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta44" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta45-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta45" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta45" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta46-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta46" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta46" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta47-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta47" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta47" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta48-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta48" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta48" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realiza seguimiento a la implementación del plan de acción y monitoreo para:</h4>
+
+              <!-- ta49 - ta56 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta49-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta49" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta49" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta50-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta50" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta50" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta51-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta51" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta51" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta52-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta52" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta52" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta53-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta53" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta53" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta54-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta54" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta54" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta55-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta55" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta55" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta56-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta56" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta56" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Los resultados del plan de acción y monitoreo son divulgados y consultados en:</h4>
+
+              <!-- ta57 - ta64 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta57-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta57" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta57" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta58-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta58" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta58" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta59-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta59" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta59" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta60-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta60" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta60" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta61-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta61" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta61" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta62-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta62" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta62" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta63-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta63" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta63" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta64-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta64" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta64" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción y monitoreo en:</h4>
+
+              <!-- ta65 - ta72 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta65-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta65" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta65" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta66-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta66" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta66" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta67-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta67" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta67" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta68-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta68" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta68" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta69-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta69" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta69" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta70-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta70" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta70" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta71-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta71" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta71" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta72-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta72" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta72" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El plan de acción y monitoreo es actualizado (mínimo una vez al año) para:</h4>
+
+              <!-- ta73 - ta80 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta73-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta73" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta73" class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta74-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta74" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta74" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta75-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta75" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta75" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta76-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta76" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta76" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta77-->
+                    <th scope="row">No impactado en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta77" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta77" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta78-->
+                    <th scope="row">Preservar la bioseguridad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta78" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta78" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta79-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta79" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta79" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                      <!-- Pregunta ta80-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta80" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta80" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">No Deforestación y No Desarrollo en suelos de turba</li>
+              </ul> <br><br>
+
+              <!-- ta81 - ta96 -->
+                
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ta81 -->
+                    <th scope="row">¿La planta extractora o el grupo empresarial ha participado en un <br>
+                      taller NDPE o similar? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta81" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta81" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr>
+                    <td *ngIf="createRegister.value.ta81 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata81 formControlName="evidenciata81" type="text" [value]="urlta81 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta81($event)" type="file">
+                      </div>
+                      <div *ngIf="urlta81 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta81 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata81 formControlName="evidenciata81" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta84 -->
+                    <th scope="row">¿Se está desarrollando trabajo con proveedores independientes de RFF <br>
+                      (pequeños productores, proveedores mayores y comerciantes) para implementar sus <br>
+                      compromisos relacionados con no deforestación y no desarrollo en turberas? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta84" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta84" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta84 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata84 formControlName="evidenciata84" type="text" [value]="urlta84 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta84($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota84()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta84 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta84 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata84 formControlName="evidenciata84" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta85 -->
+                    <th scope="row">Si el suministro de RFF viene de plantaciones propias <br>
+                      ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital <br>
+                      con alertas que son tratadas a través de un mecanismo de quejas y reclamos? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta85" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta85" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta85 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata85 formControlName="evidenciata85" type="text" [value]="urlta85 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta85($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota85()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta85 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta85 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata85 formControlName="evidenciata85" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta86 -->
+                    <th scope="row">¿Existe algún sistema implementado que garantice que los proveedores <br>
+                       externos están libres de deforestación y/o desarrollo en turberas?  </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta86" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta86" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta86 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata86 formControlName="evidenciata86" type="text" [value]="urlta86 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta86($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota86()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta86 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta86 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata86 formControlName="evidenciata86" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta88 -->
+                    <th scope="row">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos <br>
+                      en temas relacionados con deforestación y desarrollo en turberas? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <select formControlName="ta88" class="select-css">
+                            <option value="" disable selected>Seleccione una opción</option>
+                            <option>No cuenta con un sistema de quejas y reclamos</option>
+                            <option>Sin registro de quejas y reclamos</option>
+                            <option>Al menos una queja</option>
+                            <option>Reclamo sin progreso</option>                            
+                            <option>Progreso en todas las quejas</option>
+                            <option>Reclamos, pero no todas han sido resueltas</option>
+                            <option>Todas las quejas/reclamos han sido resueltas</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta88 != 'No cuenta con un sistema de quejas y reclamos'">
+                      <div>
+                        <input hidden #evidenciata88 formControlName="evidenciata88" type="text" [value]="urlta88 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta88($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota88()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta88 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta88 == 'No cuenta con un sistema de quejas y reclamos' ">
+                      <div>
+                        <input hidden #evidenciata88 formControlName="evidenciata88" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+                  <tr> <!-- ta89 -->
+                    <th scope="row">¿La planta extractora ha sido objeto de alguna visita de verificación <br> 
+                      en sitio? (que evalué criterios relacionados con deforestación y/o turba? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta89" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta89" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta89 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata89 formControlName="evidenciata89" type="text" [value]="urlta89 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta89($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota89()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta89 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta89 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata89 formControlName="evidenciata89" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta90 -->
+                    <th scope="row">¿La planta extractora o grupo empresarial ha completado el proceso de <br> 
+                      autoevaluación de sostenibilidad? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta90" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta90" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta90 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata90 formControlName="evidenciata90" type="text" [value]="urlta90 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta90($event)" type="file">
+                      </div>
+                      <div *ngIf="urlta90 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta90 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata90 formControlName="evidenciata90" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+
+                  <tr> <!-- ta91 -->
+                    <th scope="row">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta91" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta91" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta91 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata91 formControlName="evidenciata91" type="text" [value]="urlta91 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta91($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota91()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta91 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta91 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata91 formControlName="evidenciata91" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+
+                  <tr> <!-- ta92 -->
+                    <th scope="row">¿Las áreas AVC y ARC identificadas están siendo monitoreadas?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta92" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta92" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta92 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata92 formControlName="evidenciata92" type="text" [value]="urlta92 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta92($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota92()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta92 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta92 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata92 formControlName="evidenciata92" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta93 -->
+                    <th scope="row">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? <br>
+                      (y no hay opciones de expansión)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta93" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta93" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta93 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata93 formControlName="evidenciata93" type="text" [value]="urlta93 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta93($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota93()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta93 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta93 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata93 formControlName="evidenciata93" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+
+                  <tr> <!-- ta94 -->
+                    <th scope="row">¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta94" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta94" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ta95 -->
+                    <th scope="row">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta95" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta95" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta95 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata95 formControlName="evidenciata95" type="text" [value]="urlta95 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta95($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota95()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta95 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta95 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata95 formControlName="evidenciata95" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+                  <tr> <!-- ta96 -->
+                    <th scope="row">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de <br> 
+                      remediación esta siendo ejecutado (si fuese necesario)?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta96" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta96" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  <tr>
+                    <td *ngIf="createRegister.value.ta96 == 'Si'">
+
+                      <div>
+                        <input hidden #evidenciata96 formControlName="evidenciata96" type="text" [value]="urlta96 | async">
+                      </div>
+
+                      <div class="file-select" id="src-file" >
+                        <input class="form-control" (change)="ta96($event)" type="file">
+                      </div>
+                      <a style="color: rgb(0, 0, 0);" class="float-right" (click)="infota96()">            
+                        <img src="./assets/interrogacion.png" width="25" height="25" alt="">
+                      </a>
+                      <div *ngIf="urlta96 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                        <p style="text-align:center">El archivo fue cargado con exito !</p>
+                      </div>
+                      <ng-template #imagenCargada>
+                        <div class="alert alert-danger" role="alert">
+                          <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                        </div>
+                      </ng-template>
+
+                    </td>
+                    <div *ngIf="createRegister.value.ta96 == 'No' ">
+                      <div>
+                        <input hidden #evidenciata96 formControlName="evidenciata96" type="text" [value]="noAplica">
+                      </div>
+                    </div>
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Reducción de emisiones de Gases de Efecto Invernadero (GEI) y Gestión de Residuos</li>
+              </ul> <br><br>
+
+              <!-- ta97 - ta114 -->
+                
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Gestión de residuos</th>
+                    <th scope="col">Reducción/Mitigación GEI</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> 
+
+                    <th scope="row">Existe un compromiso o política </th>
+                    <!-- Opciones -->
+                    <td> <!-- ta97 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta97" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta97" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta98 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta98" class="form-check-input" type="radio"  value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta98" class="form-check-input" type="radio"  value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr> 
+
+                    <th scope="row">Existe un plan documentado</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta99 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta99" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta99" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta100 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta100" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta100" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr> 
+
+                    <th scope="row">Se realizan capacitaciones y entrenamientos documentados</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta101 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta101" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta101" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta102 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta102" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta102" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr> 
+
+                    <th scope="row">Se cuenta con equipo interno capacitado  </th>
+                    <!-- Opciones -->
+                    <td> <!-- ta103 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta103" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta103" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta104 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta104" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta104" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta105 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta105" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta105" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta106 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta106" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta106" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Minimo una vez al año se realiza seguimiento de la implementación del plan</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta107 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta107" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta107" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta108 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta108" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta108" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Los resultados de residuos son divulgados y consultados para</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta109 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta109" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta109" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta110 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta110" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta110" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta111 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta111" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta111" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta112 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta112" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta112" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Se actualiza minimo una vez al año</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta113 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta113" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta113" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta114 -->
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta114" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta114" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  
+
+
+                </tbody>
+              </table>
+
+
+              <!-- ta115 - ta120 -->
+
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ta115 -->
+                    <th scope="row">¿La empresa realiza un cálculo anual de emisión de Gases de Efecto Invernadero <br>
+                      usando la calculadora de la RSPO u otra equivalente como ISCC?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta115" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta115" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ta116 -->
+                    <th scope="row">¿Tiene un sistema de captura y / o reducción de metano?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta116" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta116" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ta117 -->
+                    <th scope="row">¿Genera energía a partir de los efluentes generados por la planta extractora o <br>
+                      vende estos efluentes específicamente para la generación de energía?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta117" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta117" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ta118 -->
+                    <th scope="row">¿Existe un plan de manejo de residuos que incluye el ciclo de gestión para cada <br>
+                      residuo (incluyendo almacenaje y la retirada)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta118" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta118" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ta119 -->
+                    <th scope="row">¿Se usa químicos clasificados como Tipo 1A o 1B por la Organización Mundial <br>
+                      de la Salud, o químicos catalogados por las convenciones de Estocolmo o Róterdam, y el paraquat?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta119" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta119" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ta120 -->
+                    <th scope="row">¿Tiene un plan para eliminar gradualmente el uso de sustancias <br>
+                      químicas Clase 1A y / o 1B de la OMS y/ o el paraquat?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta120" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ta120" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted">
+              <div class="class row">
+                <div class="class col" *ngIf="id">                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editar()" class="btn btn-success btn-lg btn-block ">GUARDAR Y CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>

@@ -1,0 +1,2157 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+    <nav *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-compania/',id]">Información de la compañía</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-gobernanza/',id]">Gobernanza</a></li>      
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-ambientales/',id]">Temas ambientales</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Fuerza laboral</li>    
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales-con/',id]">Temas sociales parte 2</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-trazabilidad/',id]">Trazabilidad</a></li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Temas sociales</span>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*TEMAS+SOCIALES+PRIMERA+PARTE*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia5.mp4?alt=media&token=8d547ae0-35a9-4ceb-bc7a-a385db6cbd04">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+            
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Respeto a los derechos humanos y laborales:</li>
+              </ul> <br><br>
+
+
+              
+              <h4>Existe un compromiso o política sobre:</h4>
+              
+              <!-- ta1 - ta9 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta1-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts1" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts1" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta2-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts2" class="field__input"  >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts2" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta3-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts3" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts3" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta4-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts4" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts4" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta5-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts5" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts5" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta6-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts6" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts6" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta7-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts7" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts7" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta8-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts8" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts8" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta9-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts9" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts9" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>El compromiso incluye a los proveedores externos para:</h4>
+
+              <!-- ta10 - ta18 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta10-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts10" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts10" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta11-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts11" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts11" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta12-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts12" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts12" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta13-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts13" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts13" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta14-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts14" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts14" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta15-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts15" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts15" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta16-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts16" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts16" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta17-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts17" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts17" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta18-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts18" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts18" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Existe un plan de acción y monitoreo documentado para el cumplimiento de:</h4>
+
+              <!-- ta19 - ta27 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta19-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts19" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts19" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta20-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts20" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts20" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta21-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts21" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts21" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta22-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts22" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts22" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta23-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts23" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts23" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta24-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts24" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts24" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta25-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts25" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts25" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta26-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts26" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts26" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta27-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts27" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts27" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realizan capacitaciones y entrenamientos documentados sobre DDHH a la fuerza laboral y grupos de interés. Se cuenta con equipo interno capacitado en:</h4>
+
+              <!-- ta28 - ta36 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta28-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts28" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts28" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta29-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts29" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts29" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta30-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts30" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts30" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta31-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts31" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts31" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta32-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts32" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts32" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta33-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts33" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts33" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta34-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts34" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts34" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta35-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts35" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts35" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta36-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts36" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts36" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso y plan de acción es divulgado y consultado con la fuerza laboral y grupos de interés para:</h4>
+
+              <!-- ta37 - ta45 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta37-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts37" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts37" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta38-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts38" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts38" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta39-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts39" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts39" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta40-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts40" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts40" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta41-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts41" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts41" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta42-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts42" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts42" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta43-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts43" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts43" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta44-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts44" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts44" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta45-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts45" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts45" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realiza seguimiento de la implementación del plan de acción de:</h4>
+
+              <!-- ta46 - ta54 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta46-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts46" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts46" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta47-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts47" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts47" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta48-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts48" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts48" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta49-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts49" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts49" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta50-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts50" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts50" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta51-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts51" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts51" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta52-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts52" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts52" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta53-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts53" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts53" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta54-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts54" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts54" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Los resultados del plan de acción son divulgados y consultados para:</h4>
+
+              <!-- ta55 - ta63 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta55-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts55" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts55" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta56-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts56" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts56" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta57-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts57" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts57" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta58-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts58" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts58" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta59-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts59" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts59" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta60-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts60" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts60" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta61-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts61" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts61" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta62-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts62" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts62" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta63-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts63" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts63" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción de:</h4>
+
+              <!-- ta64 - ta72 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta64-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts64" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts64" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta65-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts65" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts65" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta66-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts66" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts66" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta67-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts67" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts67" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta68-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts68" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts68" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta69-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts69" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts69" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta70-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts70" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts70" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta71-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts71" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts71" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta72-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts72" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts72" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El plan de acción es actualizado (mínimo una vez al año) para:</h4>
+
+              <!-- ta73 - ta81 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta73-->
+                    <th scope="row">DDHH</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts73" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts73" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta74-->
+                    <th scope="row">No trabajo forzado</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts74" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts74" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta75-->
+                    <th scope="row">No trabajo infantil</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts75" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts75" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta76-->
+                    <th scope="row">Libertad de asociación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts76" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts76" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta77-->
+                    <th scope="row">No discriminación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts77" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts77" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta78-->
+                    <th scope="row">No acoso/abuso</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts78" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts78" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta79-->
+                    <th scope="row">Horas laborales legales y decentes</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts79" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts79" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+
+
+                    <!-- Pregunta ta80-->
+                    <th scope="row">Lugares de trabajo seguros y saludables</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts80" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts80" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta81-->
+                    <th scope="row">Salarios dignos y beneficios justos</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts81" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ts81" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Caracterización de la fuerza laboral</li>
+              </ul> <br><br>
+              <h4>Complete la siguiente informacion relacionada a la fuerza laboral de la extractora</h4>
+              <br><br>
+
+              <!-- ta82 - ta96 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ts82 - ts83 - ts84 -->
+                    <th scope="row">Número de empleados en la planta</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts82  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts82" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts83  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts83" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts83 || createRegister.value.ts82 || createRegister.value.ts83 == 0 || createRegister.value.ts82 == 0" class="field field_v3"> <!-- ts84  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts84" class="field__input" value="{{createRegister.value.ts83 + createRegister.value.ts82}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts85 - ts86 - ts87 -->
+                    <th scope="row">Número de empleados con salario fijo</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts85  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts85" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts86  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts86" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts86 || createRegister.value.ts85 || createRegister.value.ts86 == 0 || createRegister.value.ts85 == 0 " class="field field_v3"> <!-- ts87  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts87" class="field__input" value="{{createRegister.value.ts86 + createRegister.value.ts85}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts88 - ts89 - ts90 -->
+                    <th scope="row">Número de empleados contratados directamente por la
+                      compañía con contratos temporales (por temporadas o estaciones)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts88  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts88" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts89  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts89" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts89 || createRegister.value.ts88 || createRegister.value.ts89==0 || createRegister.value.ts88==0" class="field field_v3"> <!-- ts90  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts90" class="field__input" value="{{createRegister.value.ts89 + createRegister.value.ts88}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts91 - ts92 - ts93 -->
+                    <th scope="row">Número de trabajadores ocasionales* contratados directamente por la
+                       empresa, incluyendo los jornaleros, no fijos o informales</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts91  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts91" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts92  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts92" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts92 || createRegister.value.ts91 || createRegister.value.ts92 ==0 || createRegister.value.ts91 ==0" class="field field_v3"> <!-- ts93  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts93" class="field__input" value="{{createRegister.value.ts92 + createRegister.value.ts91}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts94 - ts95 - ts96 -->
+                    <th scope="row">Número de trabajadores contratados de forma indirecta a través de un intermediario,
+                       jefe, contratista o agente laboral</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts94  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts94" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts95  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts95" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts95 || createRegister.value.ts94 || createRegister.value.ts95 == 0 || createRegister.value.ts94 == 0" class="field field_v3"> <!-- ts96  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts96" class="field__input" value="{{createRegister.value.ts95 + createRegister.value.ts94}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+              <h4>Complete la siguiente informacion relacionada a la fuerza laboral de plantaciones propias y/o administrativas</h4>
+              <br><br>
+
+              <!-- ta96 - ta111 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ts97 - ts98 - ts99 -->
+                    <th scope="row">Número total de empleados en la planta</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts97  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts97" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts98  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts98" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts98 || createRegister.value.ts97 || createRegister.value.ts98== 0 || createRegister.value.ts97== 0" class="field field_v3"> <!-- ts99  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts99" class="field__input" value="{{createRegister.value.ts98 + createRegister.value.ts97}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts100 - ts101 - ts102 -->
+                    <th scope="row">Número de empleados hombres con salario fijo</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts100  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts100" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts101  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts101" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts101 || createRegister.value.ts100 || createRegister.value.ts101 == 0 || createRegister.value.ts100 == 0" class="field field_v3"> <!-- ts102  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts102" class="field__input" value="{{createRegister.value.ts101 + createRegister.value.ts100}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ts103 - ts104 - ts105 -->
+                    <th scope="row">Número de empleados contratados directamente por la
+                      compañía con contratos temporales (por temporadas o estaciones)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts103  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts103" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts104  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts104" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts103 || createRegister.value.ts104 || createRegister.value.ts103 == 0 || createRegister.value.ts104 == 0" class="field field_v3"> <!-- ts105  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts105" class="field__input" value="{{createRegister.value.ts103 + createRegister.value.ts104}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ts106 - ts107 - ts108 -->
+                    <th scope="row">Número de trabajadores ocasionales* contratados directamente por la
+                      empresa, incluyendo los jornaleros, no fijos o informales</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts106  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts106" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts107  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts107" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts107 || createRegister.value.ts106 || createRegister.value.ts107 == 0 || createRegister.value.ts106 == 0" class="field field_v3"> <!-- ts108  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" formControlName="ts108" class="field__input" value="{{createRegister.value.ts107 + createRegister.value.ts106}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts109 - ts110 - ts111 -->
+                    <th scope="row">Número de trabajadores contratados de forma indirecta a través de un intermediario,
+                      jefe, contratista o agente laboral</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts109  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input readonly readonly type="number" formControlName="ts109" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts110  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input readonly readonly type="number" formControlName="ts110" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts109 || createRegister.value.ts110 || createRegister.value.ts109 == 0 || createRegister.value.ts110 == 0" class="field field_v3"> <!-- ts111  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly readonly type="number" class="field__input" formControlName="ts111" value="{{createRegister.value.ts109 + createRegister.value.ts110}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted">
+              <div class="class row">
+                <div class="class col" *ngIf="id">                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editarinfo()" class="btn btn-success btn-lg btn-block ">CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>

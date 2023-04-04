@@ -1,0 +1,66 @@
+<div *ngIf="userLogged|async as user; else login">
+    <nav >
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a class="enlace">
+            <img src="./assets/logo2.png" width="125" height="90" alt="" >
+            <img src="./assets/PF_logo_white.png" width="300" height="60" alt="">
+        </a>
+    
+        <ul>
+
+            <div class="dropdown" *ngIf="user.email == email1
+            || user.email == email2
+            || user.email == email9
+            || user.email == email4
+            || user.email == email10
+            || user.email == email3
+            ">
+                <h5>Supliers'Overview</h5>
+                <div class="dropdown-content">
+                    <p *ngIf="user.email == email1
+                    || user.email == email2
+                    || user.email == email9
+                    || user.email == email4
+                    || user.email == email10
+                    ">
+                        <a [routerLink]="['/dashboard-AAK-Mex']">Mexico</a>
+                    </p>
+                    <p *ngIf="user.email == email3
+                    || user.email == email4
+                    || user.email == email10
+                    ">
+                        <a [routerLink]="['/dashboard-AAK-Col']">Colombia</a>
+                    </p>
+                </div>
+            </div>
+
+            <li *ngIf="user.email == email1
+            || user.email == email2
+            || user.email == email3
+            || user.email == email4
+            || user.email == email5
+            || user.email == email12
+            || user.email == email6
+            || user.email == email7
+            || user.email == email8
+            || user.email == email9
+            || user.email == email10
+            "><a [routerLink]="['/listar-respuestas-admin']">Extractoras</a></li>
+            <li><a [routerLink]="['/files']">Documentación</a></li>
+            <li><a [routerLink]="['/listar-respuestas-correo']">Mis Reportes</a></li>
+            <li><a [routerLink]="['/contacto']">Contáctenos</a></li>
+            <li><a class="active" (click)="salir()">Salir</a></li>
+            <img *ngIf="user.photoURL" src="{{user.photoURL}}" 
+                width="30" height="30" class="d-inline-block align-top" alt="">
+        </ul>
+    </nav>
+    <br>
+
+</div>
+
+<ng-template #login>
+    <app-login></app-login>
+</ng-template>

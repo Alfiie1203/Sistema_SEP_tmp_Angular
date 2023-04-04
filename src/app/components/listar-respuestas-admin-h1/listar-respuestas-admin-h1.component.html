@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+<div *ngIf="userLogged|async as user" class="container mt-4" class="container mt-4">  
+    <div class="card">
+        <div class="card-body shadow-lg">
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-10">
+                  <span class="h3">Listado de respuestas por extractora</span> <br>
+                </div>
+                <div class="col-2">
+                  <a href="/listar-respuestas-admin">Ver periodo actual</a>
+                </div>
+                <div class="col-12">
+                  <br>
+                  <input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">
+                </div>
+              </div>
+            </div>
+
+            
+            
+            
+            <table class="table table-striped mt-4">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Codigo UML</th>
+                    <th scope="col">Nombre Legal</th>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Año</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacionCorreo of informacionCorreo | filter:filterPost | paginate: {itemsPerPage: 7, currentPage: pageActual}">
+                    <td>{{informacionCorreo.codEmpresa}}</td>
+                    <td>{{informacionCorreo.millName}}</td>
+                    <td>{{informacionCorreo.grupoEmpresarial}}</td>
+                    <td>{{informacionCorreo.departamento}}</td>
+                    <td>{{informacionCorreo.ano}}-{{informacionCorreo.periodo}}</td>
+                    <td><button type="button" class="btn btn-lg btn-info2" [routerLink]="['/ver-info-compania/',informacionCorreo.id]">Visualizar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+        </div>
+    </div>
+</div>

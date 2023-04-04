@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<div *ngIf="userLogged|async as user" class="container mt-4" class="container mt-4">  
+    <a style="font-size: 22px;" (click)="notificacionInicial()" class="float-center">¿Necesitas ayuda?</a>
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <span class="h3">Listado de respuestas</span>
+            <button [routerLink]="['/informacion-compania']" class="btn btn-success btn-lg float-right">Agregar</button>
+            <table class="table table-striped mt-4">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Codigo de empresa</th>
+                    <th scope="col">Nombre Legal</th>
+                    <th scope="col">Grupo empresarial</th>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Periodo reportado</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacionCorreo of informacionCorreo">
+                    <td>{{informacionCorreo.codEmpresa}}</td>
+                    <td>{{informacionCorreo.millName}}</td>
+                    <td>{{informacionCorreo.grupoEmpresarial}}</td>
+                    <td>{{informacionCorreo.departamento}}</td>
+                    <td>{{informacionCorreo.ano}}</td>
+                    <td><button type="button" class="btn btn-lg btn-info2" [routerLink]="['/edit-info-compania/',informacionCorreo.id]">Actualizar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

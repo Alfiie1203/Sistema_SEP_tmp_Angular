@@ -1,0 +1,503 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+    <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+      <nav *ngIf="id" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Información de la compañía</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Gobernanza</li>      
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas ambientales</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Fuerza laboral</li>
+          <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas sociales parte 2</li>
+          <li class="breadcrumb-item active" aria-current="page" style="color:rgb(36, 65, 197)">Trazabilidad</li>    
+        </ol>
+      </nav>
+      
+      <div class="card1">
+        <div class="card-body shadow-lg">
+  
+          <span class="h1">Trazabilidad</span>
+
+          <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*TRAZABILIDAD*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+            <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+          </a>
+
+          <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia7.mp4?alt=media&token=ec25fd47-7ac6-4148-8732-2fd2d3af4b30">            
+            <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+          </a>
+              
+          
+        </div>
+      </div>
+  
+  
+      <div class="card">
+          <div class="card-body shadow-lg">
+              <div class="card-body">
+  
+  
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      <th scope="col">Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                    <tr> <!-- tz1 -->
+                      <th scope="row">¿Compró RFF en otro país durante el período de reporte?
+                      </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="tz1" class="form-check-input" type="radio"   value="Si">
+                          <label class="form-check-label" for="inlineRadio1">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="tz1" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz2 -->
+                      <th scope="row">¿Tiene un sistema para garantizar la trazabilidad?
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="tz2" class="form-check-input" type="radio"   value="Si">
+                          <label class="form-check-label" for="inlineRadio1">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="tz2" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz4 -->
+                      <th scope="row">¿Compró a otras plantas extractoras durante el periodo de reporte?</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="tz4" class="form-check-input" type="radio"   value="Si">
+                          <label class="form-check-label" for="inlineRadio1">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="tz4" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz3 -->
+                      <th scope="row">Porcentaje (%) de trazabilidad a plantación (TTP) logrado hasta la fecha. <br> No utilice separadores como comas (,) o puntos (.).</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz3  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz3" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz5 -->
+                      <th scope="row">Producción certificada (RSPO) en RFF en toneladas métricas (Tm) durante<br> el periodo de reporte.</th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz5  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz5" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz6 -->
+                      <th scope="row">Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el<br> periodo de reporte
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz6  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz6" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz7 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de<br> PLANTACIONES PROPIAS durante el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz7  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz7" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz8 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>PROVEEDORES EXTERNOS GRANDES (mayores de 50 hectáreas) durante<br> el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz8  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz8" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz9 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>PROVEEDORES EXTERNOS PEQUEÑOS (menores de 50 hectáreas) durante<br> el periodo de reporte
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz9  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz9" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz10 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>INTERMEDIARIOS (centros independientes de recolección y distribuidores) <br>durante el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz10  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz10" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+                    <tr><th></th><td></td></tr>
+  
+                    <tr> <!-- tz11 -->
+                      <th scope="row">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de <br>PLANTAS EXTRACTORAS (Incluyendo volúmenes que se procesan por medio<br> de maquilas) durante el periodo de reporte.
+                    </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="row">
+
+                        <div class="class col-12 mb-1">      
+                          <div class="field field_v3"> <!-- tz11  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Cantidad</label>
+                            <input type="number" formControlName="tz11" class="field__input" placeholder="Cantidad exacta">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Cantidad</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                      </td>
+                    </tr>
+  
+  
+  
+  
+  
+                  </tbody>
+                </table>
+                <br><br>
+
+                <div>
+                  <input hidden #trazabilidad formControlName="trazabilidad" type="text" [value]="urlImage | async">
+                </div>
+
+                <div>
+                  <p style="text-align:center">
+                    <a target="_blank" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/CarpetaTrazabilidadOriginal%2FTrazabilidad_Extractora.xlsx?alt=media&token=cdfd2e94-79a3-40a1-bb38-47e4d0cb66d7">
+                      Descarga la plantilla de trazabilidad
+                    </a>
+                  </p>
+                </div>
+                
+
+
+                <div class="row">
+                  <div class="class col-4 ">
+                  </div>
+                  <div class="class col-4 ">
+                    <div class="file-select" id="src-file" >
+                      <input class="form-control" accept=".xml , .xlsx , .xlsm" (change)="onUpload($event)" type="file">
+                    </div>
+                  </div>                  
+                  <div class="class col-4 ">
+                  </div>
+                  <div class="class col-3 ">
+                  </div>
+                  <div class="class col-6 "> 
+                    <div *ngIf="urlImage | async; else imagenCargada" class="alert alert-success center" role="alert">
+                      <p style="text-align:center">El archivo fue cargado con exito !</p>
+                    </div>
+                  </div>
+                  <div class="class col-6 ">
+                    <ng-template #imagenCargada>
+                      <div class="alert alert-danger" role="alert">
+                        <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                      </div>
+                    </ng-template>
+                  </div>
+                  <div class="class col-3 ">
+                  </div>
+                </div>
+                
+
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <!-- Encabezados -->
+                      <th scope="col">Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+
+                  <tr> <!-- tz1 -->
+                    <th scope="row">¿Cuenta su empresa con polígonos de las plantaciones hacen parte de su base de suministro?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="tz111" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="tz111" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <div >
+                    <tr *ngIf="createRegister.value.tz111 == 'Si' "> <!-- tz1 -->
+                      <th scope="row">Indique el tipo de archivo
+                      </th>
+                      <!-- Opciones -->
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="archivo" class="form-check-input" type="radio"   value="excel">
+                          <label class="form-check-label" for="inlineRadio1">Excel</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="archivo" class="form-check-input" type="radio"  id="inlineRadio2" value="zip">
+                          <label class="form-check-label" for="inlineRadio2">ZIP / ShapeFile</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="archivo" class="form-check-input" type="radio"  id="inlineRadio2" value="kml">
+                          <label class="form-check-label" for="inlineRadio2">KMZ / KML</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input formControlName="archivo" class="form-check-input" type="radio"  id="inlineRadio2" value="geojson">
+                          <label class="form-check-label" for="inlineRadio2">GeoJson</label>
+                        </div>
+                      </td>
+                    </tr>
+                  </div>
+
+                  
+
+
+                  </tbody>
+                </table>
+
+  
+                <div *ngIf="createRegister.value.archivo == 'excel' ">
+                  <div>
+                    <input hidden #evidenciatz111 formControlName="evidenciatz111" type="text" [value]="urlta1 | async">
+                  </div>
+
+                  <div class="file-select" id="src-file">
+                    <input class="form-control" accept=".xlsx , .xlsm" (change)="ta1($event)" type="file">
+                  </div>
+                  
+                  <div *ngIf="urlta1 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                    <p style="text-align:center">El archivo fue cargado con exito !</p>
+                  </div>
+                  <ng-template #imagenCargada>
+                    <div class="alert alert-danger" role="alert">
+                      <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                    </div>
+                  </ng-template>
+                </div>
+
+                <div *ngIf="createRegister.value.archivo == 'zip' ">
+                  <div>
+                    <input hidden #evidenciatz111 formControlName="evidenciatz111" type="text" [value]="urlta1 | async">
+                  </div>
+
+                  <div class="file-select" id="src-file">
+                    <input class="form-control" accept=".zip" (change)="ta2($event)" type="file">
+                  </div>
+                  
+                  <div *ngIf="urlta1 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                    <p style="text-align:center">El archivo fue cargado con exito !</p>
+                  </div>
+                  <ng-template #imagenCargada>
+                    <div class="alert alert-danger" role="alert">
+                      <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                    </div>
+                  </ng-template>
+                </div>
+
+                <div *ngIf="createRegister.value.archivo == 'kml' ">
+                  <div>
+                    <input hidden #evidenciatz111 formControlName="evidenciatz111" type="text" [value]="urlta1 | async">
+                  </div>
+
+                  <div class="file-select" id="src-file">
+                    <input class="form-control" accept=".kml , .kmz" (change)="ta3($event)" type="file">
+                  </div>
+                  
+                  <div *ngIf="urlta1 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                    <p style="text-align:center">El archivo fue cargado con exito !</p>
+                  </div>
+                  <ng-template #imagenCargada>
+                    <div class="alert alert-danger" role="alert">
+                      <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                    </div>
+                  </ng-template>
+                </div>
+
+                <div *ngIf="createRegister.value.archivo == 'geojson' ">
+                  <div>
+                    <input hidden #evidenciatz111 formControlName="evidenciatz111" type="text" [value]="urlta1 | async">
+                  </div>
+
+                  <div class="file-select" id="src-file">
+                    <input class="form-control" accept=".geojson" (change)="ta4($event)" type="file">
+                  </div>
+                  
+                  <div *ngIf="urlta1 | async; else imagenCargada" class="alert alert-success center" role="alert">
+                    <p style="text-align:center">El archivo fue cargado con exito !</p>
+                  </div>
+                  <ng-template #imagenCargada>
+                    <div class="alert alert-danger" role="alert">
+                      <p style="text-align:center">El archivo aun no se ha cargado. ¡ Por favor espere !</p>
+                    </div>
+                  </ng-template>
+                </div>
+
+                
+  
+  
+                <br><br>
+                
+          
+                <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                  TODOS LOS CAMPOS SON OBLIGATORIOS !
+                </div>
+                
+  
+  
+              </div>
+              <div class="card-footer text-muted">
+                <div class="class row">
+                  <div class="class col" *ngIf="id">                  
+                    <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="class col">
+                    <button class="btn btn-success btn-lg btn-block " (click)="editar()">GUARDAR Y TERMINAR
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      </button>                  
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+      </div>
+      <br><br>
+    </div>
+  </form>

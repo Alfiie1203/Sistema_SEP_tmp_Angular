@@ -1,0 +1,59 @@
+<section class="vh-100 bodylog">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+
+              <div class="col-md-6 col-lg-5" style="
+                    background-color: rgb(69, 89, 147); 
+                    border-radius: 1rem;                    
+                    display: flex;
+                    align-items: center;">
+                  <img src="./assets/LogofondoOscuro.png"
+                    alt="login form" class="img-fluid justify-content-center align-items-center" />
+              </div>
+
+
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+  
+                  <form [formGroup]="createRegister">
+  
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <img src="./assets/PF_logo_blue.jpg"
+                    alt="login form" class="img-fluid justify-content-center align-items-center" />
+                    </div>
+  
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Ingrese su usuario y contraseña</h5>
+  
+                    <div class="form-outline mb-4">
+                      <input formControlName="email" type="email" id="form2Example17" class="form-control form-control-lg"/>
+                      <label class="form-label" for="form2Example17">Correo electrónico</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input formControlName="pass" type="password" id="form2Example27" class="form-control form-control-lg"/>
+                      <label class="form-label" for="form2Example27">Contraseña</label>
+                    </div>
+  
+                    <div class="pt-1 mb-4">
+                      <button (click)="ingresar()" class="btn btn-log btn-lg btn-block" type="button">Ingresar</button>                     
+                    </div>
+  
+                    <a [routerLink]="['/restablecer-contraseña']" style="color: rgb(48, 113, 191);">¿Olvidó su contraseña?</a>
+                    <p class="pb-lg-2" style="color: rgb(0, 0, 0);">¿No tienes una cuenta? <a [routerLink]="['/registro']"
+                        style="color: rgb(48, 113, 191);">Regístrate aquí</a></p>
+                  </form>  
+                </div>
+              </div>
+
+
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</section>

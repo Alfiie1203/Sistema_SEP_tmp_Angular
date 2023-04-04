@@ -1,0 +1,371 @@
+<div *ngIf="userLogged|async as user" class="container mt-4">
+    <div class="card">
+        <div class="card-body shadow-lg">
+
+
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <span class="h3">Listado de repuestas del IRF</span>
+              </div>
+              <div class="col-3">
+                <h5>Descargar solo repuestas</h5>
+                <button (click)="exportexcel()" class="btn btn-success btn-lg float-right" style="margin: 2px">H2-2022</button>
+                <button (click)="exportexcel3()" class="btn btn-success btn-lg float-right" style="margin: 2px">H1-2022</button>
+              </div>
+              <div class="col-3">                
+                <h5>Descargar con evidencias</h5>
+                <button (click)="exportexcel2()" class="btn btn-success btn-lg float-right" style="margin: 2px">H2-2022</button>
+                <button (click)="exportexcel4()" class="btn btn-success btn-lg float-right" style="margin: 2px">H1-2022</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+<!-- Periodo H2 -->
+            <table hidden class="table table-striped mt-4" id="excel-table-irf">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Año</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Codigo Empresa</th>
+                    <th scope="col">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                    <th scope="col">ISCC (Certificado)	</th>
+                    <th scope="col">POIG (Certificado)	</th>
+                    <th scope="col">¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?	</th>
+                    <th scope="col">¿La planta extractora o el grupo empresarial ha participado en un taller NDPE o similar?	</th>
+                    <th scope="col">¿La planta extractora ha sido objeto de alguna visita de verificación en sitio? (que evalué criterios relacionados con deforestación y/o turba?	</th>
+                    <th scope="col">¿La planta extractora o grupo empresarial ha completado el proceso de autoevaluación de sostenibilidad?	</th>
+                    <th scope="col">Existe un compromiso o política sobre: (No deforestación)	</th>
+                    <th scope="col">Existe un compromiso o política sobre: (No desarrollo en turberas)	</th>
+                    <th scope="col">Existe un plan de acción y monitoreo documentado para: (No deforestación)	</th>
+                    <th scope="col">Existe un plan de acción y monitoreo documentado para: (No desarrollo en turberas)	</th>
+                    <th scope="col">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos en temas relacionados con deforestación y desarrollo en turberas?	</th>
+                    <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte > 0 Respuesta es Si Pero Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte = 0      Respuesta es No 	</th>
+                    <th scope="col">(Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte) / (Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte) *100	</th>
+                    <th scope="col">	</th>
+                    <th scope="col">	</th>
+                    <th scope="col">Si el suministro de RFF viene de plantaciones propias ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital con alertas que son tratadas a través de un mecanismo de quejas y reclamos?	</th>
+                    <th scope="col">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? (y no hay opciones de expansión)	</th>
+                    <th scope="col">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?	</th>
+                    <th scope="col">¿Las áreas AVC y ARC identificadas están siendo monitoreadas? 	</th>
+                    <th scope="col">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?	</th>
+                    <th scope="col">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de remediación esta siendo ejecutado (si fuese necesario)?	</th>
+                    <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                    <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                    <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?	</th>
+                    <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let informacion of informacionCorreo">
+                    <td>{{informacion.ano}}</td> 
+                    <td>{{informacion.id}}</td> 
+                    <td>{{informacion.codEmpresa}}</td> 
+                    <td>{{informacion.go99}}</td> 
+                    <td>{{informacion.go83}}</td> 
+                    <td>{{informacion.go86}}</td> 
+                    <td>{{informacion.ta94}}</td> 
+                    <td>{{informacion.ta81}}</td> 
+                    <td>{{informacion.ta89}}</td>   
+                    <td>{{informacion.ta90}}</td> 
+                    <td>{{informacion.ta1}}</td> 
+                    <td>{{informacion.ta2}}</td> 
+                    <td>{{informacion.ta17}}</td> 
+                    <td>{{informacion.ta18}}</td> 
+                    <td>{{informacion.ta88}}</td> 
+                    <td>{{informacion.dos}}</td>
+                    <td>{{informacion.uno}}</td> 
+                    <td></td> 
+                    <td></td> 
+                    <td>{{informacion.ta85}}</td> 
+                    <td>{{informacion.ta93}}</td> 
+                    <td>{{informacion.ta91}}</td> 
+                    <td>{{informacion.ta92}}</td> 
+                    <td>{{informacion.ta95}}</td> 
+                    <td>{{informacion.ta96}}</td> 
+                    <td>{{informacion.ta84}}</td> 
+                    <td>{{informacion.ta84}}</td> 
+                    <td>{{informacion.ta86}}</td>                    
+                    <td>{{informacion.ta86}}</td>
+                  </tr>
+                </tbody>
+            </table>
+
+            <table hidden class="table table-striped mt-4" id="excel-table-irf2">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Año</th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Codigo Empresa</th>
+                  <th scope="col">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                  <th scope="col">ISCC (Certificado)	</th>
+                  <th scope="col">POIG (Certificado)	</th>
+                  <th scope="col">¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?	</th>
+                  <th scope="col">¿La planta extractora o el grupo empresarial ha participado en un taller NDPE o similar?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿La planta extractora ha sido objeto de alguna visita de verificación en sitio? (que evalué criterios relacionados con deforestación y/o turba?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿La planta extractora o grupo empresarial ha completado el proceso de autoevaluación de sostenibilidad?	</th>
+                  <th scope="col">Existe un compromiso o política sobre: (No deforestación)	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">Existe un compromiso o política sobre: (No desarrollo en turberas)	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">Existe un plan de acción y monitoreo documentado para: (No deforestación)	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">Existe un plan de acción y monitoreo documentado para: (No desarrollo en turberas)	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos en temas relacionados con deforestación y desarrollo en turberas?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte > 0 Respuesta es Si Pero Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte = 0      Respuesta es No 	</th>
+                  <th scope="col">(Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte) / (Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte) *100	</th>
+                  <th scope="col">	</th>
+                  <th scope="col">	</th>
+                  <th scope="col">Si el suministro de RFF viene de plantaciones propias ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital con alertas que son tratadas a través de un mecanismo de quejas y reclamos?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? (y no hay opciones de expansión)	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿Las áreas AVC y ARC identificadas están siendo monitoreadas? 	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de remediación esta siendo ejecutado (si fuese necesario)?	</th>
+                  <th scope="col">Evidencia</th>
+                  <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                  <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                  <th scope="col">Evidencia	</th>
+                  <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?	</th>
+                  <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?</th>
+                  <th scope="col">Evidencia	</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let informacion of informacionCorreo">
+                  <td>{{informacion.ano}}</td> 
+                  <td>{{informacion.id}}</td> 
+                  <td>{{informacion.codEmpresa}}</td> 
+                  <td>{{informacion.go99}}</td> 
+                  <td>{{informacion.go83}}</td> 
+                  <td>{{informacion.go86}}</td>
+                  <td>{{informacion.ta94}}</td> 
+                  <td>{{informacion.ta81}}</td> 
+                  <td>{{informacion.evidenciata81}}</td> 
+                  <td>{{informacion.ta89}}</td> 
+                  <td>{{informacion.evidenciata89}}</td>   
+                  <td>{{informacion.ta90}}</td> 
+                  <td>{{informacion.ta1}}</td> 
+                  <td>{{informacion.evidenciata1}}</td> 
+                  <td>{{informacion.ta2}}</td> 
+                  <td>{{informacion.evidenciata2}}</td> 
+                  <td>{{informacion.ta17}}</td> 
+                  <td>{{informacion.evidenciata17}}</td> 
+                  <td>{{informacion.ta18}}</td> 
+                  <td>{{informacion.evidenciata18}}</td> 
+                  <td>{{informacion.ta88}}</td> 
+                  <td>{{informacion.evidenciata88}}</td>
+                  <td>{{informacion.dos}}</td>
+                  <td>{{informacion.uno}}</td> 
+                  <td></td> 
+                  <td></td> 
+                  <td>{{informacion.ta85}}</td> 
+                  <td>{{informacion.evidenciata85}}</td>
+                  <td>{{informacion.ta93}}</td> 
+                  <td>{{informacion.evidenciata93}}</td>
+                  <td>{{informacion.ta91}}</td> 
+                  <td>{{informacion.evidenciata91}}</td>
+                  <td>{{informacion.ta92}}</td> 
+                  <td>{{informacion.evidenciata92}}</td>
+                  <td>{{informacion.ta95}}</td>
+                  <td>{{informacion.evidenciata95}}</td> 
+                  <td>{{informacion.ta96}}</td> 
+                  <td>{{informacion.evidenciata96}}</td>
+                  <td>{{informacion.ta84}}</td> 
+                  <td>{{informacion.ta84}}</td> 
+                  <td>{{informacion.evidenciata84}}</td>
+                  <td>{{informacion.ta86}}</td>                    
+                  <td>{{informacion.ta86}}</td>
+                  <td>{{informacion.evidenciata86}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+<!--Periodo H1-->
+          <table hidden class="table table-striped mt-4" id="excel-table-irf-h1">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Año</th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Codigo Empresa</th>
+                  <th scope="col">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                  <th scope="col">ISCC (Certificado)	</th>
+                  <th scope="col">POIG (Certificado)	</th>
+                  <th scope="col">¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?	</th>
+                  <th scope="col">¿La planta extractora o el grupo empresarial ha participado en un taller NDPE o similar?	</th>
+                  <th scope="col">¿La planta extractora ha sido objeto de alguna visita de verificación en sitio? (que evalué criterios relacionados con deforestación y/o turba?	</th>
+                  <th scope="col">¿La planta extractora o grupo empresarial ha completado el proceso de autoevaluación de sostenibilidad?	</th>
+                  <th scope="col">Existe un compromiso o política sobre: (No deforestación)	</th>
+                  <th scope="col">Existe un compromiso o política sobre: (No desarrollo en turberas)	</th>
+                  <th scope="col">Existe un plan de acción y monitoreo documentado para: (No deforestación)	</th>
+                  <th scope="col">Existe un plan de acción y monitoreo documentado para: (No desarrollo en turberas)	</th>
+                  <th scope="col">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos en temas relacionados con deforestación y desarrollo en turberas?	</th>
+                  <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte > 0 Respuesta es Si Pero Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte = 0      Respuesta es No 	</th>
+                  <th scope="col">(Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte) / (Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte) *100	</th>
+                  <th scope="col">	</th>
+                  <th scope="col">	</th>
+                  <th scope="col">Si el suministro de RFF viene de plantaciones propias ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital con alertas que son tratadas a través de un mecanismo de quejas y reclamos?	</th>
+                  <th scope="col">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? (y no hay opciones de expansión)	</th>
+                  <th scope="col">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?	</th>
+                  <th scope="col">¿Las áreas AVC y ARC identificadas están siendo monitoreadas? 	</th>
+                  <th scope="col">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?	</th>
+                  <th scope="col">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de remediación esta siendo ejecutado (si fuese necesario)?	</th>
+                  <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                  <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                  <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?	</th>
+                  <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let informacion of informacionCorreoh1">
+                  <td>{{informacion.ano}}</td> 
+                  <td>{{informacion.id}}</td> 
+                  <td>{{informacion.codEmpresa}}</td> 
+                  <td>{{informacion.go99}}</td> 
+                  <td>{{informacion.go83}}</td> 
+                  <td>{{informacion.go86}}</td> 
+                  <td>{{informacion.ta94}}</td> 
+                  <td>{{informacion.ta81}}</td> 
+                  <td>{{informacion.ta89}}</td>   
+                  <td>{{informacion.ta90}}</td> 
+                  <td>{{informacion.ta1}}</td> 
+                  <td>{{informacion.ta2}}</td> 
+                  <td>{{informacion.ta17}}</td> 
+                  <td>{{informacion.ta18}}</td> 
+                  <td>{{informacion.ta88}}</td> 
+                  <td>{{informacion.dos}}</td>
+                  <td>{{informacion.uno}}</td> 
+                  <td></td> 
+                  <td></td> 
+                  <td>{{informacion.ta85}}</td> 
+                  <td>{{informacion.ta93}}</td> 
+                  <td>{{informacion.ta91}}</td> 
+                  <td>{{informacion.ta92}}</td> 
+                  <td>{{informacion.ta95}}</td> 
+                  <td>{{informacion.ta96}}</td> 
+                  <td>{{informacion.ta84}}</td> 
+                  <td>{{informacion.ta84}}</td> 
+                  <td>{{informacion.ta86}}</td>                    
+                  <td>{{informacion.ta86}}</td>
+                </tr>
+              </tbody>
+          </table>
+
+          <table hidden class="table table-striped mt-4" id="excel-table-irf2-h1">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Año</th>
+                <th scope="col">Id</th>
+                <th scope="col">Codigo Empresa</th>
+                <th scope="col">Si cuenta con certificación RSPO, indique el modelo de cadena de suministro</th>
+                <th scope="col">ISCC (Certificado)	</th>
+                <th scope="col">POIG (Certificado)	</th>
+                <th scope="col">¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?	</th>
+                <th scope="col">¿La planta extractora o el grupo empresarial ha participado en un taller NDPE o similar?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿La planta extractora ha sido objeto de alguna visita de verificación en sitio? (que evalué criterios relacionados con deforestación y/o turba?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿La planta extractora o grupo empresarial ha completado el proceso de autoevaluación de sostenibilidad?	</th>
+                <th scope="col">Existe un compromiso o política sobre: (No deforestación)	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">Existe un compromiso o política sobre: (No desarrollo en turberas)	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">Existe un plan de acción y monitoreo documentado para: (No deforestación)	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">Existe un plan de acción y monitoreo documentado para: (No desarrollo en turberas)	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos en temas relacionados con deforestación y desarrollo en turberas?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte > 0 Respuesta es Si Pero Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte = 0      Respuesta es No 	</th>
+                <th scope="col">(Volumen de RFF procesados (toneladas métricas, Tm) proveniente de PLANTACIONES PROPIAS durante el periodo de reporte) / (Volumen TOTAL de RFF (toneladas métricas, Tm) recibidos durante el periodo de reporte) *100	</th>
+                <th scope="col">	</th>
+                <th scope="col">	</th>
+                <th scope="col">Si el suministro de RFF viene de plantaciones propias ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital con alertas que son tratadas a través de un mecanismo de quejas y reclamos?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? (y no hay opciones de expansión)	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿Las áreas AVC y ARC identificadas están siendo monitoreadas? 	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de remediación esta siendo ejecutado (si fuese necesario)?	</th>
+                <th scope="col">Evidencia</th>
+                <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                <th scope="col">¿Se está desarrollando trabajo con proveedores independientes de RFF (pequeños productores, proveedores mayores y comerciantes) para implementar sus compromisos relacionados con no deforestación y no desarrollo en turberas?	</th>
+                <th scope="col">Evidencia	</th>
+                <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?	</th>
+                <th scope="col">¿Existe algún sistema implementado que garantice que los proveedores externos están libres de deforestación y/o desarrollo en turberas?</th>
+                <th scope="col">Evidencia	</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let informacion of informacionCorreoh1">
+                <td>{{informacion.ano}}</td> 
+                <td>{{informacion.id}}</td> 
+                <td>{{informacion.codEmpresa}}</td> 
+                <td>{{informacion.go99}}</td> 
+                <td>{{informacion.go83}}</td> 
+                <td>{{informacion.go86}}</td>
+                <td>{{informacion.ta94}}</td> 
+                <td>{{informacion.ta81}}</td> 
+                <td>{{informacion.evidenciata81}}</td> 
+                <td>{{informacion.ta89}}</td> 
+                <td>{{informacion.evidenciata89}}</td>   
+                <td>{{informacion.ta90}}</td> 
+                <td>{{informacion.ta1}}</td> 
+                <td>{{informacion.evidenciata1}}</td> 
+                <td>{{informacion.ta2}}</td> 
+                <td>{{informacion.evidenciata2}}</td> 
+                <td>{{informacion.ta17}}</td> 
+                <td>{{informacion.evidenciata17}}</td> 
+                <td>{{informacion.ta18}}</td> 
+                <td>{{informacion.evidenciata18}}</td> 
+                <td>{{informacion.ta88}}</td> 
+                <td>{{informacion.evidenciata88}}</td>
+                <td>{{informacion.dos}}</td>
+                <td>{{informacion.uno}}</td> 
+                <td></td> 
+                <td></td> 
+                <td>{{informacion.ta85}}</td> 
+                <td>{{informacion.evidenciata85}}</td>
+                <td>{{informacion.ta93}}</td> 
+                <td>{{informacion.evidenciata93}}</td>
+                <td>{{informacion.ta91}}</td> 
+                <td>{{informacion.evidenciata91}}</td>
+                <td>{{informacion.ta92}}</td> 
+                <td>{{informacion.evidenciata92}}</td>
+                <td>{{informacion.ta95}}</td>
+                <td>{{informacion.evidenciata95}}</td> 
+                <td>{{informacion.ta96}}</td> 
+                <td>{{informacion.evidenciata96}}</td>
+                <td>{{informacion.ta84}}</td> 
+                <td>{{informacion.ta84}}</td> 
+                <td>{{informacion.evidenciata84}}</td>
+                <td>{{informacion.ta86}}</td>                    
+                <td>{{informacion.ta86}}</td>
+                <td>{{informacion.evidenciata86}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+    </div>
+</div>

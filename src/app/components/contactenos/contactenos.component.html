@@ -1,0 +1,80 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" (ngSubmit)="editar()">
+    <div *ngIf="userLogged|async as user" class="container mt-4">
+      
+      <div class="card1">
+        <div class="card-body shadow-lg">
+  
+          <span class="h1">Contactenos:</span>
+              
+          
+        </div>
+      </div>
+  
+  
+      <div class="card">
+          <div class="card-body shadow-lg">
+              <div class="card-body">
+
+                
+                <div class="class row">
+                    <div class="class col-6 mb-1">
+                        <br>
+                        <h2>Proforest Latinoamérica</h2> <br>
+                        <p>
+                          Para cumplir con los compromisos de abastecimiento responsable, 
+                          las empresas deben comprender dónde se producen los productos básicos 
+                          que compran. Proforest apoya a las empresas en este camino a través del 
+                          <b>SEP</b> por medio de de cinco pasos:<br>
+
+                          <br> <b>1.</b> Definir estrategias y orientar
+                          <br> <b>2.</b> Comprender la base de suministro
+                          <br> <b>3.</b> Planificación de intervenciones
+                          <br> <b>4.</b> Promover involucramiento dentro y más allá de las cadenas de suministro
+                          <br> <b>5.</b> Monitorear y comunicar
+                        </p>
+                        
+                        <br><br>
+                        
+                        <div class="card-footer text-muted">
+                            <div class="class row">
+                              <div class="class col-3">                                              
+                              </div>
+                              <div class="class col-2">
+                                <a target="_blank" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+gustaría+obtener+mas+información&type=phone_number&app_absent=0">
+                                    <img src="./assets/wa.png" width="50" height="50" alt="">
+                                </a>
+                              </div>
+                              <div class="class col-2">
+                                <a target="_blank" href="https://www.linkedin.com/company/proforest/">
+                                    <img src="./assets/in.png" width="50" height="50" alt=""> 
+                                </a>
+                              </div>
+                              <div class="class col-2">
+                                <a target="_blank" href="https://twitter.com/proforest">
+                                    <img src="./assets/tw.png" width="50" height="50" alt=""> 
+                                </a>
+                              </div>
+                              <div class="class col-3">             
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+
+                    
+                    <div class="class col-6 mb-1">                                      
+                      <img src="./assets/Picture1.png" width="100%" alt="">
+                    </div>
+                </div>
+
+                
+  
+  
+              </div>
+              
+          </div>
+      </div>
+      <br><br>
+    </div>
+  </form>

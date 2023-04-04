@@ -1,0 +1,543 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+    <nav *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Información de la compañía</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Gobernanza</li>      
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas ambientales</li>
+        <li class="breadcrumb-item active" aria-current="page" style="color:rgb(36, 65, 197)">Fuerza laboral</li>    
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas sociales parte 2</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Trazabilidad</li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Temas sociales</span>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*TEMAS+SOCIALES+PRIMERA+PARTE*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia5.mp4?alt=media&token=8d547ae0-35a9-4ceb-bc7a-a385db6cbd04">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+        
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Caracterización de la fuerza laboral</li>
+              </ul> <br><br>
+              <h4>Complete la siguiente informacion relacionada a la fuerza laboral de la extractora</h4>
+              <br><br>
+
+              <!-- ta82 - ta96 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ts82 - ts83 - ts84 -->
+                    <th scope="row">Número de empleados en la planta extractora</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts82  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts82" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span> 
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts83  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts83" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts83 || createRegister.value.ts82 || createRegister.value.ts83 == 0 || createRegister.value.ts82 == 0" class="field field_v3"> <!-- ts84  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts84" class="field__input" value="{{createRegister.value.ts83 + createRegister.value.ts82}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts85 - ts86 - ts87 -->
+                    <th scope="row">Número de empleados con salario fijo</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts85  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts85" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts86  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts86" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts86 || createRegister.value.ts85 || createRegister.value.ts86 == 0 || createRegister.value.ts85 == 0 " class="field field_v3"> <!-- ts87  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts87" class="field__input" value="{{createRegister.value.ts86 + createRegister.value.ts85}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts88 - ts89 - ts90 -->
+                    <th scope="row">Número de empleados contratados directamente por la
+                      compañía con contratos temporales (por temporadas o estaciones)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts88  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts88" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts89  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts89" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts89 || createRegister.value.ts88 || createRegister.value.ts89==0 || createRegister.value.ts88==0" class="field field_v3"> <!-- ts90  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts90" class="field__input" value="{{createRegister.value.ts89 + createRegister.value.ts88}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts91 - ts92 - ts93 -->
+                    <th scope="row">Número de trabajadores ocasionales contratados directamente por la
+                       empresa, incluyendo los jornaleros, no fijos o informales (tip)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts91  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts91" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts92  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts92" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts92 || createRegister.value.ts91 || createRegister.value.ts92 ==0 || createRegister.value.ts91 ==0" class="field field_v3"> <!-- ts93  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts93" class="field__input" value="{{createRegister.value.ts92 + createRegister.value.ts91}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts94 - ts95 - ts96 -->
+                    <th scope="row">Número de trabajadores contratados de forma indirecta a través de un intermediario,
+                       jefe, contratista o agente laboral</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts94  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts94" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts95  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts95" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts95 || createRegister.value.ts94 || createRegister.value.ts95 == 0 || createRegister.value.ts94 == 0" class="field field_v3"> <!-- ts96  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts96" class="field__input" value="{{createRegister.value.ts95 + createRegister.value.ts94}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+              <h4>Complete la siguiente informacion relacionada a la fuerza laboral de plantaciones propias y/o administrativas</h4>
+              <br><br>
+
+              <!-- ta96 - ta111 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ts97 - ts98 - ts99 -->
+                    <th scope="row">Número total de empleados en las plantaciones propias</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts97  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts97" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts98  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts98" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts98 || createRegister.value.ts97 || createRegister.value.ts98== 0 || createRegister.value.ts97== 0" class="field field_v3"> <!-- ts99  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts99" class="field__input" value="{{createRegister.value.ts98 + createRegister.value.ts97}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts100 - ts101 - ts102 -->
+                    <th scope="row">Número de empleados con salario fijo</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">
+                          <div class="field field_v3"> <!-- ts100  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts100" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="class col-4 mb-1">
+                          <div class="field field_v3"> <!-- ts101  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts101" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="class col-4 mb-1">
+                          <div *ngIf="createRegister.value.ts101 || createRegister.value.ts100 || createRegister.value.ts101 == 0 || createRegister.value.ts100 == 0" class="field field_v3"> <!-- ts102  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts102" class="field__input" value="{{createRegister.value.ts101 + createRegister.value.ts100}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ts103 - ts104 - ts105 -->
+                    <th scope="row">Número de empleados contratados directamente por la
+                      compañía con contratos temporales (por temporadas o estaciones)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts103  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts103" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts104  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts104" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts103 || createRegister.value.ts104 || createRegister.value.ts103 == 0 || createRegister.value.ts104 == 0" class="field field_v3"> <!-- ts105  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts105" class="field__input" value="{{createRegister.value.ts103 + createRegister.value.ts104}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ts106 - ts107 - ts108 -->
+                    <th scope="row">Número de trabajadores ocasionales contratados directamente por la
+                      empresa, incluyendo los jornaleros, no fijos o informales (tip)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts106  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts106" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts107  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts107" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts107 || createRegister.value.ts106 || createRegister.value.ts107 == 0 || createRegister.value.ts106 == 0" class="field field_v3"> <!-- ts108  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" formControlName="ts108" class="field__input" value="{{createRegister.value.ts107 + createRegister.value.ts106}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts109 - ts110 - ts111 -->
+                    <th scope="row">Número de trabajadores contratados de forma indirecta a través de un intermediario,
+                      jefe, contratista o agente laboral</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="row">
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts109  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Hombres</label>
+                            <input type="number" formControlName="ts109" class="field__input" placeholder="Cantidad de hombres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Hombres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div class="field field_v3"> <!-- ts110  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Mujeres</label>
+                            <input type="number" formControlName="ts110" class="field__input" placeholder="Cantidad de mujeres">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Mujeres</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                        <div class="class col-4 mb-1">      
+                          <div *ngIf="createRegister.value.ts109 || createRegister.value.ts110 || createRegister.value.ts109 == 0 || createRegister.value.ts110 == 0" class="field field_v3"> <!-- ts111  -->
+                            <label for="sitioWeb" class="ha-screen-reader">Total</label>
+                            <input readonly type="number" class="field__input" formControlName="ts111" value="{{createRegister.value.ts109 + createRegister.value.ts110}}">
+                            <span class="field__label-wrap" aria-hidden="true">
+                              <span class="field__label h7">Total</span>
+                            </span>
+                          </div>                          
+                        </div>
+
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted">
+              <div class="class row">
+                <div class="class col" *ngIf="id">                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editar()" class="btn btn-success btn-lg btn-block ">GUARDAR Y CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>

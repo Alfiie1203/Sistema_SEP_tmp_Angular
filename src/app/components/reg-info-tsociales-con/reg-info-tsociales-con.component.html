@@ -1,0 +1,936 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister" >
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+    <nav *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Información de la compañía</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Gobernanza</li>      
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Temas ambientales</li>
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Fuerza laboral</li>
+        <li class="breadcrumb-item active" aria-current="page" style="color:rgb(36, 65, 197)">Temas sociales parte 2</li>    
+        <li class="breadcrumb-item" style="color:rgb(77, 77, 77)">Trazabilidad</li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Temas sociales</span>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*TEMAS+SOCIALES+SEGUNDA+PARTE*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia6.mp4?alt=media&token=6c512029-5635-4591-8e91-c24d8af857a0">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+            
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Derechos laborales</li>
+              </ul> <br><br>
+
+              <!-- ta115 - ta120 -->
+
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr> <!-- ts208 -->
+                    <th scope="row">¿La empresa tiene un compromiso sobre derechos humanos que incluya los siguientes temas? ¿O se ha adherido la empresa al compromiso del comprador?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <select formControlName="ts208" class="select-css">
+                            <option value="" disable selected>Seleccione una opción</option>
+                            <option>Trabajo Infantil</option>
+                            <option>Trabajo forzado</option>
+                            <option>Libertad de asociación y negociación colectiva</option>                            
+                            <option>No discriminación</option>
+                            <option>No prácticas abusivas o procesos disciplinarios indebidos</option>
+                            <option>Horas de trabajo legales y decentes</option>
+                            <option>Lugares de trabajo y condiciones de vida seguras y saludables</option>
+                            <option>Salarios dignos y beneficios justos</option>
+                            <option>Prácticas justas de contratación</option>
+                            <option>Derechos sobre la tierra y los recursos de todos los titulares legítimos de tenencia de la tierra y los recursos</option>
+                            <option>Consentimiento libre, previo e informado (CLPI)</option>
+                            <option>Defensores de derechos humanos</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts134 -->
+                    <th scope="row">¿La empresa ha comunicado sus compromisos de respetar los derechos  laborales a los trabajadores en un idioma que entiendan?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts134" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts134" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts204 -->
+                    <th scope="row">¿La empresa ha comunicado sus compromisos de los derechos sobre la tierra internamente?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts204" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts204" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts203 -->
+                    <th scope="row">¿La empresa ha comunicado sus compromisos de los derechos sobre la tierra públicamente, incluso a todas las comunidades locales potencialmente afectadas por sus operaciones y cadena de suministro?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts203" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts203" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>                  
+                  
+
+                  <tr> <!-- ts191 -->
+                    <th scope="row">¿La empresa ha comunicado sus compromisos de los derechos sobre la tierra públicamente, incluso a todas las comunidades locales potencialmente afectadas por sus operaciones y cadena de suministro?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts191" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts191" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  
+
+                  <tr> <!-- ts209 -->
+                    <th scope="row">¿Hay una persona en un puesto de alta dirección que se asegure de que se cumplan los  compromisos de la política?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts209" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts209" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+                  
+
+                  <tr> <!-- ts210 -->
+                    <th scope="row">¿La empresa cuenta con personal calificado y recursos asignados para gestionar los problemas de derechos laborales y el compromiso entre la empresa y la comunidad?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts210" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts210" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts180 -->
+                    <th scope="row">¿La empresa cuenta con personal calificado y recursos asignados a la gestión de los problemas de derechos sobre la tierra y la participación de la empresa y la comunidad?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts180" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts180" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts211 -->
+                    <th scope="row">¿La empresa ha realizado evaluaciones de riesgos sobre los posibles impactos que sus operaciones están teniendo en los derechos humanos que incluya los siguientes temas? 
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <select formControlName="ts211" class="select-css">
+                            <option value="" disable selected>Seleccione una opción</option>
+                            <option>Trabajo Infantil</option>
+                            <option>Trabajo forzado</option>
+                            <option>Libertad de asociación y negociación colectiva</option>                            
+                            <option>No discriminación</option>
+                            <option>No prácticas abusivas o procesos disciplinarios indebidos</option>
+                            <option>Horas de trabajo legales y decentes</option>
+                            <option>Lugares de trabajo y condiciones de vida seguras y saludables</option>
+                            <option>Salarios dignos y beneficios justos</option>
+                            <option>Prácticas justas de contratación</option>
+                            <option>Derechos sobre la tierra y los recursos de todos los titulares legítimos de tenencia de la tierra y los recursos</option>
+                            <option>Consentimiento libre, previo e informado (CLPI)</option>
+                            <option>Defensores de derechos humanos</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts212 -->
+                    <th scope="row">¿La empresa cuenta con un sindicato o comité de trabajadores?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts212" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts212" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts137 -->
+                    <th scope="row">¿La empresa cuenta con un sistema continuo permanente para la comunicación bidireccional entre los trabajadores y la gerencia para discutir, abordar y reportar problemas laborales?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts137" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts137" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts132 -->
+                    <th scope="row">¿La empresa ha sido objeto de una visita al sitio con componente de derechos laborales?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts132" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts132" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts189 -->
+                    <th scope="row">¿La empresa ha sido objeto  de una visita en sitio con un componente de derechos sobre la tierra?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts189" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts189" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts213 -->
+                    <th scope="row">¿La empresa se involucra regularmente con los pueblos indígenas y / o las comunidades locales y otras partes interesadas afectadas para comunicar el progreso y monitorear los impactos nuevos / potenciales?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts213" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts213" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts214 -->
+                    <th scope="row">Si la empresa se abastece de proveedores externos, ¿ha realizado evaluaciones de riesgos sobre los posibles impactos de su base de suministro de terceros en los derechos  humanos que incluya los siguientes temas? 
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <select formControlName="ts214" class="select-css">
+                            <option value="" disable selected>Seleccione una opción</option>
+                            <option>Trabajo Infantil</option>
+                            <option>Trabajo forzado</option>
+                            <option>Libertad de asociación y negociación colectiva</option>                            
+                            <option>No discriminación</option>
+                            <option>No prácticas abusivas o procesos disciplinarios indebidos</option>
+                            <option>Horas de trabajo legales y decentes</option>
+                            <option>Lugares de trabajo y condiciones de vida seguras y saludables</option>
+                            <option>Salarios dignos y beneficios justos</option>
+                            <option>Prácticas justas de contratación</option>
+                            <option>Derechos sobre la tierra y los recursos de todos los titulares legítimos de tenencia de la tierra y los recursos</option>
+                            <option>Consentimiento libre, previo e informado (CLPI)</option>
+                            <option>Defensores de derechos humanos</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts131 -->
+                    <th scope="row">¿La empresa ha sido parte de un taller del NDPE o similar que haya incluido los siguientes derechos como tema durante los últimos 3 años?  
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <select formControlName="ts131" class="select-css">
+                            <option value="" disable selected>Seleccione una opción</option>
+                            <option>Derechos laborales</option>
+                            <option>Derechos sobre la Tierra</option>
+                            <option>No</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts215 -->
+                    <th scope="row">¿Tiene un plan de acción que muestre cómo está abordando los riesgos y logrando el cumplimiento de sus compromisos de derechos humanos (laborales y sobre la tierra) en sus operaciones?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts215" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts215" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts216 -->
+                    <th scope="row">¿El plan de acción esta vinculado a los resultados de la evaluación de riesgos de los derechos humanos (laborales y sobre la tierra)? 
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts216" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts216" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts186 -->
+                    <th scope="row">En el caso de que no se hayan llevado a cabo procesos adecuados de CLPI antes del cambio de uso de la tierra, ¿la empresa y sus fincas han evaluado, remediado y resuelto las quejas relacionadas con el cambio de uso de la tierra (si corresponde)?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts186" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts186" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts126 -->
+                    <th scope="row">Si la empresa se abastece de proveedores externos, ¿tiene un plan de acción desarrollado junto con proveedores externos para mejorar sus prácticas en materia de derechos laborales y de la tierra?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts126" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts126" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts217 -->
+                    <th scope="row">¿Tiene la empresa procedimientos para lo siguiente?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <select formControlName="ts217" class="select-css">
+                            <option value="" disable selected>Seleccione una opción</option>
+                            <option>Trabajo Infantil</option>
+                            <option>Trabajo forzado</option>
+                            <option>Libertad de asociación y negociación colectiva</option>                            
+                            <option>No discriminación</option>
+                            <option>No prácticas abusivas o procesos disciplinarios indebidos</option>
+                            <option>Horas de trabajo legales y decentes</option>
+                            <option>Lugares de trabajo y condiciones de vida seguras y saludables</option>
+                            <option>Salarios dignos y beneficios justos</option>
+                            <option>Prácticas justas de contratación</option>
+                            <option>Derechos sobre la tierra y los recursos de todos los titulares legítimos de tenencia de la tierra y los recursos</option>
+                            <option>Consentimiento libre, previo e informado (CLPI)</option>
+                            <option>Defensores de derechos humanos</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>                   
+
+
+                  <tr> <!-- ts218 -->
+                    <th scope="row">Para sus operaciones y empresas actuales, ¿tiene la empresa evidencia de un derecho legítimo a usar la tierra, incluida la documentación legal y la evidencia de que afectó a los pueblos indígenas y / o locales?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts218" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts218" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts219 -->
+                    <th scope="row">Las comunidades han sido consultadas adecuadamente después de un proceso integral de CLPI
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts219" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts219" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ts220 -->
+                    <th scope="row">¿Monitorea regularmente los resultados de las acciones tomadas para mejorar el respeto de los derechos humanos en sus propias operaciones?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts220" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts220" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  
+                  <tr><th></th><td></td></tr>                 
+
+
+                  <tr> <!-- ts221 -->
+                    <th scope="row">¿Comunica regularmente a los trabajadores las acciones tomadas para abordar los problemas laborales?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts221" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts221" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts115 -->
+                    <th scope="row">¿Cuenta con un mecanismo operativo integral de quejas que pueda recibir y abordar problemas o quejas planteadas por trabajadores o grupos que representen a los trabajadores en relación con los impactos en los derechos laborales de las operaciones de la empresa?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts115" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts115" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts119 -->
+                    <th scope="row">Si está presente, ¿está registrando e investigando todas las quejas relacionadas con los derechos laborales contra sus  operaciones propias?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts119" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts119" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts222 -->
+                    <th scope="row">¿Existen reclamaciones activas relacionadas con los derechos laborales contra las operaciones propias de la empresa?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts222" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts222" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts120 -->
+                    <th scope="row">Si existen, ¿todas las quejas relacionadas con los derechos laborales de sus operaciones propias siguen un proceso de resolución integral acordado por todas las partes involucradas?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts120" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts120" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts207 -->
+                    <th scope="row">¿Tiene la empresa un mecanismo operativo integral de quejas para recibir y abordar los problemas o quejas planteados por cualquier individuo o grupo relacionado con los impactos de los derechos sobre la tierra de las  operaciones  propias de la empresa?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts207" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts207" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts198 -->
+                    <th scope="row">¿Está la empresa registrando e investigando todas las quejas sobre los derechos a la tierra (si las hay) planteadas contra sus operaciones propias?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts198" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts198" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts199 -->
+                    <th scope="row">Si están presentes, ¿todas las quejas relacionadas con los derechos sobre la tierra contra las operaciones propias de la empresa siguen un proceso de resolución integral que es acordado por todas las partes involucradas?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts199" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts199" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts197 -->
+                    <th scope="row">¿Hay alguna queja activa relacionada con los derechos sobre la tierra contra las  operaciones propias de la empresa?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts197" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts197" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts223 -->
+                    <th scope="row">¿Existen quejas activas relacionadas con los derechos sobre la tierra de sus proveedores externos?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts223" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts223" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts224 -->
+                    <th scope="row">¿Tiene la empresa un mecanismo operativo integral de quejas para recibir y abordar los problemas o quejas planteados por cualquier individuo o grupo en relación con los impactos de los derechos humanos a de los proveedores externos de la empresa?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts224" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts224" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts121 -->
+                    <th scope="row">Si está presente, ¿está la empresa registrando e investigando todas las quejas relacionadas con los derechos laborales en su cadena de suministro (quejas contra sus proveedores externos)?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts121" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts121" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts201 -->
+                    <th scope="row">¿Está la empresa registrando e investigando todas las quejas de los derechos sobre la tierra (si las hubiera) presentadas contra sus proveedores externos?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts201" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts201" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts225 -->
+                    <th scope="row">¿La empresa evalúa las prácticas laborales de sus proveedores externos?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts225" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts225" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts192 -->
+                    <th scope="row">Si la empresa se abastece de fincas /plantaciones de terceros, ¿tiene evidencia de que estos proveedores tienen derecho legítimo a usar la tierra?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts192" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts192" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts226 -->
+                    <th scope="row">Si la empresa se abastece de proveedores externos, ¿cuenta con un sistema para involucrar y apoyar a sus proveedores / productores externos en el cumplimiento de los compromisos de derechos laborales (incluidos los pequeños agricultores y comerciantes / comerciantes / recolectores)?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts226" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts226" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts195 -->
+                    <th scope="row">Si la empresa se abastece de proveedores externos, ¿cuenta con un sistema para involucrar y apoyar a proveedores / productores externos en el cumplimiento de los compromisos de derechos sobre la tierra (incluidos los pequeños agricultores y comerciantes / comerciantes / recolectores)?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts195" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts195" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  
+
+                  <tr> <!-- ts227 -->
+                    <th scope="row">Si la empresa se abastece de proveedores / productores externos, ¿tiene e implementa procedimientos de selección e incorporación de  nuevos proveedores sobre su riesgo y desempeño en el respeto de los derechos humanos?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts227" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts227" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+                  <tr> <!-- ts194 -->
+                    <th scope="row">Si la empresa se abastece de pequeños propietarios independientes, ¿ha verificado que no hay conflictos o disputas asociadas con la tierra utilizada por estos pequeños propietarios independientes o, si hay conflictos / disputas, que estos están bajo un proceso de resolución?
+                    </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts194" class="form-check-input" type="radio"   value="Si">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="ts194" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+              
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted">
+              <div class="class row">
+                <div class="class col" *ngIf="id">                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editar()" class="btn btn-success btn-lg btn-block ">GUARDAR Y CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>

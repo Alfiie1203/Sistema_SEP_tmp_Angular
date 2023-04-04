@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+body{
+    background-image: url('./assets/fondo2.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+.bodylog{
+    background-image: url(./assets/fondo3.6.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+                              
+}

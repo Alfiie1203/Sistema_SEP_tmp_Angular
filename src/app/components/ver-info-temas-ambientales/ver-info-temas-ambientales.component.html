@@ -1,0 +1,2619 @@
+<app-menu></app-menu>
+<form [formGroup]="createRegister">
+  <div *ngIf="userLogged|async as user" class="container mt-4">
+
+
+    <nav target="_blank" *ngIf="id" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-compania/',id]">Información de la compañía</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-gobernanza/',id]">Gobernanza</a></li>      
+        <li class="breadcrumb-item active" aria-current="page">Temas ambientales</li>    
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales/',id]">Fuerza laboral</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-temas-sociales-con/',id]">Temas sociales parte 2</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/ver-info-trazabilidad/',id]">Trazabilidad</a></li>
+      </ol>
+    </nav>
+    
+    <div class="card1">
+      <div class="card-body shadow-lg">
+
+        <span class="h1">Temas ambientales</span>
+
+        <a style="color: rgb(255, 255, 255);" class="float-right" href="https://api.whatsapp.com/send/?phone=573168708252&text=Me+encuentro+en+el+apartado+de+*TEMAS+AMBIENTALES*+pero+estoy+teniendo+errores+con+*MENCIONE+AQUI+SUS+ERRORES*&type=phone_number&app_absent=0">            
+          <img src="./assets/wa.png" width="45" height="45" alt=""> ¿Necesitas ayuda?
+        </a>
+
+        <a target="_blank" style="color: rgb(255, 255, 255);" class="float-right" href="https://firebasestorage.googleapis.com/v0/b/sep-tmp.appspot.com/o/videos%2FMultimedia4.mp4?alt=media&token=e1b07414-2d88-4ade-8b0a-300d1261d702">            
+          <img src="./assets/video.png" width="45" height="45" alt=""> ¿No sabes que hacer? &nbsp;
+        </a>
+            
+        
+      </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body shadow-lg">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Respeto a los bosques y la biodiversidad:</li>
+              </ul> <br><br>
+
+
+              
+              <h4>Existe un compromiso o política sobre:</h4>
+
+              
+              <!-- ta1 - ta8 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta1-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta1" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta1" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta2-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta2" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta2" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta1-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata1 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata1}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+
+                    <!-- Pregunta ta2-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata2 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata2}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+
+                  <tr>
+                    <!-- Pregunta ta3-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta3" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta3" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta4-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta4" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta4" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta5-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta5" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta5" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta6-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta6" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta6" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta7-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta7" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta7" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta8-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta8" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta8" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso incluye a los proveedores externos para:</h4>
+
+              <!-- ta9 - ta16 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta9-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta9" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta9" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta10-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta10" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta10" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta11-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta11" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta11" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta12-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta12" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta12" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta13-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta13" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta13" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta14-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta14" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta14" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta15-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta15" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta15" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta16-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta16" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta16" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Existe un plan de acción y monitoreo documentado para:</h4>
+
+              <!-- ta17 - ta24 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta17-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta17" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta17" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta18-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta18" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta18" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta17-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata17 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata17}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+
+                    <!-- Pregunta ta18-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata18 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata18}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta19-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta19" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta19" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta20-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta20" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta20" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta21-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta21" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta21" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta22-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta22" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta22" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta23-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta23" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta23" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta24-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta24" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta24" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realizan capacitaciones y entrenamientos documentados a la fuerza laboral y grupos de interés en:</h4>
+
+              <!-- ta25 - ta32 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta25-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta25" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta25" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta26-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta26" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta26" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta27-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta27" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta27" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta28-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta28" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta28" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta29-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta29" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta29" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta30-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta30" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta30" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta31-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta31" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta31" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta32-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta32" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta32" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se cuenta con equipo interno capacitado en:</h4>
+
+              <!-- ta33 - ta40 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta33-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta33" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta33" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta34-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta34" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta34" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta35-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta35" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta35" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta36-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta36" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta36" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta37-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta37" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta37" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta38-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta38" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta38" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta39-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta39" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta39" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta40-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta40" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta40" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El compromiso, plan de acción y monitoreo es divulgado y consultado con la fuerza laboral y grupos de interés</h4>
+
+              <!-- ta41 - ta48 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta41-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta41" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta41" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta42-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta42" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta42" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta43-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta43" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta43" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta44-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta44" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta44" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta45-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta45" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta45" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta46-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta46" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta46" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta47-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta47" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta47" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta48-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta48" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta48" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se realiza seguimiento a la implementación del plan de acción y monitoreo para:</h4>
+
+              <!-- ta49 - ta56 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta49-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta49" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta49" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta50-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta50" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta50" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta51-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta51" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta51" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta52-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta52" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta52" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta53-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta53" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta53" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta54-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta54" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta54" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta55-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta55" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta55" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta56-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta56" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta56" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <br><br>
+              <h4>Los resultados del plan de acción y monitoreo son divulgados y consultados en:</h4>
+
+              <!-- ta57 - ta64 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta57-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta57" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta57" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta58-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta58" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta58" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta59-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta59" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta59" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta60-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta60" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta60" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta61-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta61" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta61" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta62-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta62" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta62" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta63-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta63" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta63" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta64-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta64" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta64" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>Se toma acciones preventivas y correctivas basadas en los resultados de la implementación del plan de acción y monitoreo en:</h4>
+
+              <!-- ta65 - ta72 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta65-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta65" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta65" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta66-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta66" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta66" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta67-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta67" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta67" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta68-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta68" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta68" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta69-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta69" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta69" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta70-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta70" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta70" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta71-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta71" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta71" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta72-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta72" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta72" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+
+              <br><br>
+              <h4>El plan de acción y monitoreo es actualizado (mínimo una vez al año) para:</h4>
+
+              <!-- ta73 - ta80 -->
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                    <th scope="col">Opciones</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr>
+                    <!-- Pregunta ta73-->
+                    <th scope="row">No deforestación</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta73" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta73" class="field__input" type="radio" id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                    <!-- Pregunta ta74-->
+                    <th scope="row">No desarrollo en turberas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta74" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta74" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta75-->
+                    <th scope="row">No desarrollo en áreas AVC-ARC</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta75" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta75" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta76-->
+                    <th scope="row">No uso al fuego</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta76" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta76" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta77-->
+                    <th scope="row">No impacto en áreas protegidas</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta77" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta77" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+
+                    <!-- Pregunta ta78-->
+                    <th scope="row">Preservar la biodiversidad</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta78" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta78" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+
+
+                  <tr>
+                    <!-- Pregunta ta79-->
+                    <th scope="row">No abastecimiento / Desmonte ilegal</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta79" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta79" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                      <!-- Pregunta ta80-->
+                    <th scope="row">EISA</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta80" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta80" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">No Deforestación y No Desarrollo en suelos de turba</li>
+              </ul> <br><br>
+
+              <!-- ta81 - ta96 -->
+                
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ta81 -->
+                    <th scope="row">¿La planta extractora o el grupo empresarial ha participado en un <br>
+                      taller NDPE o similar? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta81" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta81" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <!-- Pregunta ta81-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata81 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata81}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+                  <tr> <!-- ta84 -->
+                    <th scope="row">¿Se está desarrollando trabajo con proveedores independientes de RFF <br>
+                      (pequeños productores, proveedores mayores y comerciantes) para implementar sus <br>
+                      compromisos relacionados con no deforestación? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta84" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta84" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <!-- Pregunta ta84-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata84 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata84}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+                  <tr> <!-- ta85 -->
+                    <th scope="row">Si el suministro de RFF viene de plantaciones propias <br>
+                      ¿Las plantaciones están siendo monitoreadas por un sistema de monitoreo satelital <br>
+                      con alertas que son tratadas a través de un mecanismo de quejas y reclamos? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta85" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta85" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta85-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata85 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata85}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+                  <tr> <!-- ta86 -->
+                    <th scope="row">¿Existe algún sistema implementado que garantice que los proveedores <br>
+                       externos están libres de deforestación y/o desarrollo en turberas?  </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta86" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta86" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta86-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata86 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata86}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+                  <tr> <!-- ta88 -->
+                    <th scope="row">¿Qué tanto progreso se tiene para direccionar las quejas y reclamos <br>
+                      en temas relacionados con deforestación y desarrollo en turberas? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field_v3"> <!-- Materia Prima  --> 
+                        <div class="field__input">
+                          <input readonly formControlName="ta88" class="select-css">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta88-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata88 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata88}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+                  <tr> <!-- ta89 -->
+                    <th scope="row">¿La planta extractora ha sido objeto de alguna visita de verificación <br> 
+                      en sitio? (que evalué criterios relacionados con deforestación y/o turba? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta89" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta89" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta89-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata89 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata89}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+                  <tr> <!-- ta90 -->
+                    <th scope="row">¿La planta extractora o grupo empresarial ha completado el proceso de <br> 
+                      autoevaluación de sostenibilidad? </th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta90" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta90" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta90-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata90 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata90}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+
+                  <tr> <!-- ta91 -->
+                    <th scope="row">¿Las plantaciones propias ya tienen evaluaciones AVC y/o ARC?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta91" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta91" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta91-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata91 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata91}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+
+                  <tr> <!-- ta92 -->
+                    <th scope="row">¿Las áreas AVC y ARC identificadas están siendo monitoreadas?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta92" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta92" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta92-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata92 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata92}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+                  <tr> <!-- ta93 -->
+                    <th scope="row">¿La empresa ya cuenta con la planificación total de sus plantaciones propias? <br>
+                      (y no hay opciones de expansión)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta93" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta93" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta93-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata93 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata93}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+
+                  <tr> <!-- ta94 -->
+                    <th scope="row">¿Se han identificado turberas en un radio de 50 km alrededor de la planta extractora?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta94" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta94" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ta95 -->
+                    <th scope="row">¿Las plantaciones propias ya tienen evaluaciones de suelos y/o turberas?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta95" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta95" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta95-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata95 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata95}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+                  <tr> <!-- ta96 -->
+                    <th scope="row">¿Las áreas de turberas están siendo manejadas y monitoreadas y el plan de <br> 
+                      remediación esta siendo ejecutado (si fuese necesario)?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta96" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta96" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <!-- Pregunta ta96-->
+                    <th scope="row"></th>
+                    <!-- Opciones -->
+                    <td *ngFor="let info of info">
+                      <div *ngIf="createRegister.value.evidenciata96 != ''; else sinArchivo">
+                          <button type="button" class="btn btn-lg btn-info2"> <a style="color: #fff;" href="{{info.evidenciata96}}" target="_blank">Ver Evidencia</a> </button>
+                      </div>
+                      <ng-template #sinArchivo>
+                        <div class="alert alert-danger" role="alert">
+                          No se cargo evidencia
+                        </div>
+                      </ng-template>
+                    </td>
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+
+
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item h3">Reducción de emisiones de Gases de Efecto Invernadero (GEI) y Gestión de Residuos</li>
+              </ul> <br><br>
+
+              <!-- ta97 - ta114 -->
+                
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Gestión de residuos</th>
+                    <th scope="col">Reducción/Mitigación GEI</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> 
+
+                    <th scope="row">Existe un compromiso o política </th>
+                    <!-- Opciones -->
+                    <td> <!-- ta97 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta97" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta97" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta98 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta98" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta98" class="field__input" type="radio"  value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr> 
+
+                    <th scope="row">Existe un plan documentado</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta99 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta99" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta99" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta100 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta100" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta100" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr> 
+
+                    <th scope="row">Se realizan capacitaciones y entrenamientos documentados</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta101 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta101" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta101" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta102 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta102" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta102" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  <tr> 
+
+                    <th scope="row">Se cuenta con equipo interno capacitado  </th>
+                    <!-- Opciones -->
+                    <td> <!-- ta103 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta103" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta103" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta104 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta104" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta104" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Es divulgado y consultado con la fuerza laboral y grupos de interés</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta105 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta105" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta105" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta106 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta106" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta106" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Minimo una vez al año se realiza seguimiento de la implementación del plan</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta107 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta107" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta107" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta108 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta108" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta108" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Los resultados de residuos son divulgados y consultados para</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta109 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta109" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta109" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta110 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta110" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta110" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Se toma acciones preventivas y correctivas basadas en los resultados de la implementación</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta111 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta111" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta111" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta112 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta112" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta112" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+
+                  <tr> 
+
+                    <th scope="row">Se actualiza minimo una vez al año</th>
+                    <!-- Opciones -->
+                    <td> <!-- ta113 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta113" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta113" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+
+                    <td> <!-- ta114 -->
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta114" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta114" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+
+                  </tr>
+
+
+                  
+
+
+                </tbody>
+              </table>
+
+
+              <!-- ta115 - ta120 -->
+
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <!-- Encabezados -->
+                    <th scope="col">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr> <!-- ta115 -->
+                    <th scope="row">¿La empresa realiza un cálculo anual de emisión de Gases de Efecto Invernadero <br>
+                      usando la calculadora de la RSPO u otra equivalente como ISCC?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta115" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta115" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ta116 -->
+                    <th scope="row">¿Tiene un sistema de captura y / o reducción de metano?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta116" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta116" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ta117 -->
+                    <th scope="row">¿Genera energía a partir de los efluentes generados por la planta extractora o <br>
+                      vende estos efluentes específicamente para la generación de energía?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta117" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta117" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ta118 -->
+                    <th scope="row">¿Existe un plan de manejo de residuos que incluye el ciclo de gestión para cada <br>
+                      residuo (incluyendo almacenaje y la retirada)</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta118" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta118" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+
+                  <tr> <!-- ta119 -->
+                    <th scope="row">¿Se usa químicos clasificados como Tipo 1A o 1B por la Organización Mundial <br>
+                      de la Salud, o químicos catalogados por las convenciones de Estocolmo o Róterdam, y el paraquat?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta119" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta119" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr><th></th><td></td></tr>
+
+
+                  <tr> <!-- ta120 -->
+                    <th scope="row">¿Tiene un plan para eliminar gradualmente el uso de sustancias <br>
+                      químicas Clase 1A y / o 1B de la OMS y/ o el paraquat?</th>
+                    <!-- Opciones -->
+                    <td>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta120" class="field__input" >
+                        
+                      </div>
+                      <div class="field field_v3">
+                        <input readonly formControlName="ta120" class="field__input" type="radio"  id="inlineRadio2" value="No" hidden>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+              <br><br>
+
+
+
+
+              <br><br>
+              
+        
+              <div *ngIf="submitted && createRegister.invalid " class="alert alert-danger" role="alert">
+                TODOS LOS CAMPOS SON OBLIGATORIOS !
+              </div>
+              
+
+
+            </div>
+            <div class="card-footer text-muted">
+              <div class="class row">
+                <div class="class col" *ngIf="id">                  
+                  <button class="btn btn-primary btn-lg btn-block " (click)="salir()">VOLVER
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="class col">
+                  <button (click)="editar()" class="btn btn-success btn-lg btn-block ">CONTINUAR
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <br><br>
+  </div>
+</form>
